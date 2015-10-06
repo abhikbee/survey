@@ -13,7 +13,7 @@
 <![endif]-->
 </head>
 <body>
-<section class="slideBlock" id="rewardsA">
+<section class="slideBlock" id="rewardsA"><img src="../images/glass.png" alt="" class="glass">
   <div class="container">
     <div class="loaderDiv">
       <div class="loader">Loading...</div>

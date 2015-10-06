@@ -13,36 +13,26 @@
 <![endif]-->
 </head>
 <body>
-<section class="slideBlock" id="rewardsA">
+<section class="slideBlock"><img src="../images/glass.png" alt="" class="glass">
   <div class="container">
     <div class="loaderDiv">
       <div class="loader">Loading...</div>
     </div>
-    <div class="question" id="question12">
-      <p>You visit Starbucks and purchased a Tall Latte costing $2.85. As a member of Starbucks Rewards A, you can get any food or drink item free with 12 stars. Please click on the items that you purchased to collect stars under Rewards A.</p>
+    <div class="question" id="questionDone">
+    	<h1>Congratulations!</h1>
+       <p>You’ve collected 12 stars under Rewards A – You’re next drink is on us. Please select one free item and click the Continue button to proceed.</p>
+
       <div class="cf">
-        <div class="rewardsAStar">
-          <ul>
-            <li class="star1 active"><img src="../images/star.png" alt="star"></li>
-            <li class="star2 active"><img src="../images/star.png" alt="star"></li>
-            <li class="star3 active"><img src="../images/star.png" alt="star"></li>
-            <li class="star4 active"><img src="../images/star.png" alt="star"></li>
-            <li class="star5 active"><img src="../images/star.png" alt="star"></li>
-            <li class="star6 active"><img src="../images/star.png" alt="star"></li>
-            <li class="star7 active"><img src="../images/star.png" alt="star"></li>
-            <li class="star8 active"><img src="../images/star.png" alt="star"></li>
-            <li class="star9 active"><img src="../images/star.png" alt="star"></li>
-            <li class="star10 active"><img src="../images/star.png" alt="star"></li>
-            <li class="star11 active"><img src="../images/star.png" alt="star"></li>
-            <li class="star12"><img src="../images/star.png" alt="star"></li>
-          </ul>
-        </div>
         <div class="rewardsProducts">
-          <div class="productBlock"> <img src="../images/rp3.jpg"> <span class="price">$<span class="prc">5</span></span></div>
-          <div class="productBlock"> <img src="../images/rp3.jpg"> <span class="price">$<span class="prc">5</span></span></div>
-          <div class="productBlock"> <img src="../images/rp3.jpg"> <span class="price">$<span class="prc">5</span></span></div>
-          <div class="productBlock"> <img src="../images/rp3.jpg"> <span class="price">$<span class="prc">5</span></span></div>
-          <div class="totalSpend">Spend = $<span id="totalSpend">0</span></div>
+          <div class="productBlock"> <img src="../images/rp3.jpg"></div>
+          <div class="productBlock"> <img src="../images/rp3.jpg"></div>
+          <div class="productBlock"> <img src="../images/rp3.jpg"></div>
+          <div class="productBlock"> <img src="../images/rp3.jpg"></div>
+          <div class="productBlock"> <img src="../images/rp3.jpg"></div>
+          <div class="productBlock"> <img src="../images/rp3.jpg"></div>
+          <div class="productBlock"> <img src="../images/rp3.jpg"></div>
+          <div class="productBlock"> <img src="../images/rp3.jpg"></div>
+          
         </div>
       </div>
       <a href="rewardsacomplete.php" class="continueBtn disable">Continue</a> </div>

@@ -58,10 +58,12 @@ p,h1,h2,h3,h4,h5,h6, ul,ol,dd,table,fieldset,address {margin: 0 0 20px;}
 .rewardsAStar img { background-color:#e4e4e4}
 .rewardsAStar .active img { background-color:#dbbb7e}
 
-.rewardsProducts { float:right; width:56%; margin-bottom:50px;}
+.rewardsProducts { float:right; width:56%; margin-bottom:30px;}
 .productBlock { float:left; width:46%; margin:0 2% 25px; border:3px solid #dcdcdc;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px; position:relative; cursor:pointer;}
 .checked { background:url(../images/cheched.png) no-repeat; width:30px; height:30px; text-indent:-1000px; overflow:hidden; text-align:left; display:block; position:absolute; right:-13px; top:-13px}
 .price { background:#dcdcdc; display:block; position:absolute; left:50%; bottom:0; line-height:32px; width:65px; margin-left:-32px;-moz-border-radius-topleft: 5px;-webkit-border-top-left-radius: 5px; border-top-left-radius: 5px;-moz-border-radius-topright: 5px;-webkit-border-top-right-radius: 5px;border-top-right-radius: 5px; font-size:20px; font-weight:bold; color:#000000; padding-top:3px;}
 .checkPrd { border-color:#24bd53;}
 .checkPrd .price { background-color:#24bd53; color:#fff}
 .totalSpend{clear:both; font-size:24px; color:#000; text-align:center; font-family: 'Crete Round', serif;}
+#questionDone .rewardsProducts { float:none; width:auto;}
+#questionDone .productBlock {width:23%; margin:0 1% 25px}
