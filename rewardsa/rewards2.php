@@ -45,7 +45,7 @@
           <div class="totalSpend">Spend = $<span id="totalSpend">0</span></div>
         </div>
       </div>
-      <a href="rewardsa3.php" class="continueBtn disable">Continue</a> </div>
+      <a href="rewards3.php" class="continueBtn disable">Continue</a> </div>
   </div>
   <div class="progressBar">
     <div class="progressStep ra1"><span class="fillBG"></span></div>

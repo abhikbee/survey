@@ -18,15 +18,15 @@
     <div class="loaderDiv">
       <div class="loader">Loading...</div>
     </div>
-    <div class="question" id="question1">
+    <div class="question" id="question5">
       <p>You visit Starbucks and purchased a Tall Latte costing $2.85. As a member of Starbucks Rewards A, you can get any food or drink item free with 12 stars. Please click on the items that you purchased to collect stars under Rewards A.</p>
       <div class="cf">
         <div class="rewardsAStar">
           <ul>
-            <li class="star1"><img src="../images/star.png" alt="star"></li>
-            <li class="star2"><img src="../images/star.png" alt="star"></li>
-            <li class="star3"><img src="../images/star.png" alt="star"></li>
-            <li class="star4"><img src="../images/star.png" alt="star"></li>
+            <li class="star1 active"><img src="../images/star.png" alt="star"></li>
+            <li class="star2 active"><img src="../images/star.png" alt="star"></li>
+            <li class="star3 active"><img src="../images/star.png" alt="star"></li>
+            <li class="star4 active"><img src="../images/star.png" alt="star"></li>
             <li class="star5"><img src="../images/star.png" alt="star"></li>
             <li class="star6"><img src="../images/star.png" alt="star"></li>
             <li class="star7"><img src="../images/star.png" alt="star"></li>
@@ -43,7 +43,7 @@
           <div class="totalSpend">Spend = $<span id="totalSpend">0</span></div>
         </div>
       </div>
-      <a href="rewards2.php" class="continueBtn disable">Continue</a> </div>
+      <a href="rewards6.php" class="continueBtn disable">Continue</a> </div>
   </div>
   <div class="progressBar">
     <div class="progressStep ra1"><span class="fillBG"></span></div>

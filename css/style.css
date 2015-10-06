@@ -46,6 +46,7 @@ p,h1,h2,h3,h4,h5,h6, ul,ol,dd,table,fieldset,address {margin: 0 0 20px;}
 .progressBar .progressStep:before {bottom:0; margin-bottom:-7.5px}
 .progressBar .progressStep.done:before{background-color:#24bd53}
 .progressBar .fillBG {display:block; background-color:#24bd53;}
+.progressBar .done .fillBG {height:100%}
 .loaderDiv {position:fixed; left:0; top:0; width:100%; height:100%; background-color:#fff; z-index:9999}
 .loader {position:absolute; left:50%; top:50%; margin:-24px 0 0 -24px;  font-size:10px;position: relative;text-indent: -9999em;border-top:5px solid #eee;border-right:5px solid #eee;border-bottom:5px solid #eee;border-left:5px solid #dbbb7e;-webkit-transform: translateZ(0);-ms-transform: translateZ(0);transform: translateZ(0);-webkit-animation: load8 1.1s infinite linear;animation: load8 1.1s infinite linear;}
 .loader,.loader:after {border-radius: 50%;width:48px;height:48px;}
@@ -65,5 +66,8 @@ p,h1,h2,h3,h4,h5,h6, ul,ol,dd,table,fieldset,address {margin: 0 0 20px;}
 .checkPrd { border-color:#24bd53;}
 .checkPrd .price { background-color:#24bd53; color:#fff}
 .totalSpend{clear:both; font-size:24px; color:#000; text-align:center; font-family: 'Crete Round', serif;}
-#questionDone .rewardsProducts { float:none; width:auto;}
-#questionDone .productBlock {width:23%; margin:0 1% 25px}
+#questionADone .rewardsProducts, #questionBDone .rewardsProducts { float:none; width:auto;}
+#questionADone .productBlock, #questionBDone .productBlock {width:23%; margin:0 1% 25px}
+
+/*Reward B*/
+#rewardsB .rewardsAStar li { width:6.5%}
