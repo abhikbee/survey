@@ -24,25 +24,136 @@
         <div class="rewardsAStar">
           <ul>
             <li class="star1 active"><img src="../images/star.png" alt="star"></li>
+            <li class="star1 active"><img src="../images/star.png" alt="star"></li>
+            <li class="star1 active"><img src="../images/star.png" alt="star"></li>
+            <li class="star1 active"><img src="../images/star.png" alt="star"></li>
+            <li class="star1 active"><img src="../images/star.png" alt="star"></li>
+            <li class="star2 active"><img src="../images/star.png" alt="star"></li>
+            <li class="star2 active"><img src="../images/star.png" alt="star"></li>
+            <li class="star2 active"><img src="../images/star.png" alt="star"></li>
+            <li class="star2 active"><img src="../images/star.png" alt="star"></li>
+            <li class="star2 active"><img src="../images/star.png" alt="star"></li>
+            <li class="star2 active"><img src="../images/star.png" alt="star"></li>
+            <li class="star2 active"><img src="../images/star.png" alt="star"></li>
+            <li class="star2 active"><img src="../images/star.png" alt="star"></li>
+            <li class="star2 active"><img src="../images/star.png" alt="star"></li>
+            <li class="star2 active"><img src="../images/star.png" alt="star"></li>
+            <li class="star2 active"><img src="../images/star.png" alt="star"></li>
+            <li class="star2 active"><img src="../images/star.png" alt="star"></li>
+            <li class="star2 active"><img src="../images/star.png" alt="star"></li>
+            <li class="star2 active"><img src="../images/star.png" alt="star"></li>
+            <li class="star2 active"><img src="../images/star.png" alt="star"></li>
+            <li class="star2 active"><img src="../images/star.png" alt="star"></li>
+            <li class="star2 active"><img src="../images/star.png" alt="star"></li>
+            <li class="star2 active"><img src="../images/star.png" alt="star"></li>
+            <li class="star2 active"><img src="../images/star.png" alt="star"></li>
+            <li class="star2 active"><img src="../images/star.png" alt="star"></li>
             <li class="star2 active"><img src="../images/star.png" alt="star"></li>
             <li class="star3 active"><img src="../images/star.png" alt="star"></li>
+            <li class="star3 active"><img src="../images/star.png" alt="star"></li>
+            <li class="star3 active"><img src="../images/star.png" alt="star"></li>
+            <li class="star3 active"><img src="../images/star.png" alt="star"></li>
+            <li class="star3 active"><img src="../images/star.png" alt="star"></li>
+            <li class="star3 active"><img src="../images/star.png" alt="star"></li>
+            <li class="star3 active"><img src="../images/star.png" alt="star"></li>
+            <li class="star3 active"><img src="../images/star.png" alt="star"></li>
+            <li class="star3 active"><img src="../images/star.png" alt="star"></li>
+            <li class="star3 active"><img src="../images/star.png" alt="star"></li>
+            <li class="star3 active"><img src="../images/star.png" alt="star"></li>
+            <li class="star3 active"><img src="../images/star.png" alt="star"></li>
+            <li class="star3 active"><img src="../images/star.png" alt="star"></li>
+            <li class="star3 active"><img src="../images/star.png" alt="star"></li>
+            <li class="star3 active"><img src="../images/star.png" alt="star"></li>
+            <li class="star3 active"><img src="../images/star.png" alt="star"></li>
+            <li class="star3 active"><img src="../images/star.png" alt="star"></li>
+            <li class="star4 active"><img src="../images/star.png" alt="star"></li>
+            <li class="star4 active"><img src="../images/star.png" alt="star"></li>
+            <li class="star4 active"><img src="../images/star.png" alt="star"></li>
+            <li class="star4 active"><img src="../images/star.png" alt="star"></li>
             <li class="star4 active"><img src="../images/star.png" alt="star"></li>
             <li class="star5 active"><img src="../images/star.png" alt="star"></li>
+            <li class="star5 active"><img src="../images/star.png" alt="star"></li>
+            <li class="star5 active"><img src="../images/star.png" alt="star"></li>
+            <li class="star5 active"><img src="../images/star.png" alt="star"></li>
+            <li class="star5 active"><img src="../images/star.png" alt="star"></li>
+            <li class="star5 active"><img src="../images/star.png" alt="star"></li>
+            <li class="star5 active"><img src="../images/star.png" alt="star"></li>
+            <li class="star6"><img src="../images/star.png" alt="star"></li>
+            <li class="star6"><img src="../images/star.png" alt="star"></li>
+            <li class="star6"><img src="../images/star.png" alt="star"></li>
+            <li class="star6"><img src="../images/star.png" alt="star"></li>
+            <li class="star6"><img src="../images/star.png" alt="star"></li>
+            <li class="star6"><img src="../images/star.png" alt="star"></li>
+            <li class="star6"><img src="../images/star.png" alt="star"></li>
             <li class="star6"><img src="../images/star.png" alt="star"></li>
             <li class="star7"><img src="../images/star.png" alt="star"></li>
+            <li class="star7"><img src="../images/star.png" alt="star"></li>
+            <li class="star7"><img src="../images/star.png" alt="star"></li>
+            <li class="star7"><img src="../images/star.png" alt="star"></li>
+            <li class="star7"><img src="../images/star.png" alt="star"></li>
+            <li class="star7"><img src="../images/star.png" alt="star"></li>
+            <li class="star7"><img src="../images/star.png" alt="star"></li>
+            <li class="star7"><img src="../images/star.png" alt="star"></li>
+            <li class="star7"><img src="../images/star.png" alt="star"></li>
+            <li class="star7"><img src="../images/star.png" alt="star"></li>
+            <li class="star7"><img src="../images/star.png" alt="star"></li>
+            <li class="star7"><img src="../images/star.png" alt="star"></li>
+            <li class="star8"><img src="../images/star.png" alt="star"></li>
+            <li class="star8"><img src="../images/star.png" alt="star"></li>
+            <li class="star8"><img src="../images/star.png" alt="star"></li>
+            <li class="star8"><img src="../images/star.png" alt="star"></li>
+            <li class="star8"><img src="../images/star.png" alt="star"></li>
+            <li class="star8"><img src="../images/star.png" alt="star"></li>
+            <li class="star8"><img src="../images/star.png" alt="star"></li>
+            <li class="star8"><img src="../images/star.png" alt="star"></li>
+            <li class="star8"><img src="../images/star.png" alt="star"></li>
+            <li class="star8"><img src="../images/star.png" alt="star"></li>
             <li class="star8"><img src="../images/star.png" alt="star"></li>
             <li class="star9"><img src="../images/star.png" alt="star"></li>
+            <li class="star9"><img src="../images/star.png" alt="star"></li>
+            <li class="star9"><img src="../images/star.png" alt="star"></li>
+            <li class="star9"><img src="../images/star.png" alt="star"></li>
+            <li class="star9"><img src="../images/star.png" alt="star"></li>
+            <li class="star9"><img src="../images/star.png" alt="star"></li>
+            <li class="star9"><img src="../images/star.png" alt="star"></li>
+            <li class="star9"><img src="../images/star.png" alt="star"></li>
+            <li class="star9"><img src="../images/star.png" alt="star"></li>
+            <li class="star10"><img src="../images/star.png" alt="star"></li>
+            <li class="star10"><img src="../images/star.png" alt="star"></li>
+            <li class="star10"><img src="../images/star.png" alt="star"></li>
+            <li class="star10"><img src="../images/star.png" alt="star"></li>
             <li class="star10"><img src="../images/star.png" alt="star"></li>
             <li class="star11"><img src="../images/star.png" alt="star"></li>
+            <li class="star11"><img src="../images/star.png" alt="star"></li>
+            <li class="star11"><img src="../images/star.png" alt="star"></li>
+            <li class="star11"><img src="../images/star.png" alt="star"></li>
+            <li class="star11"><img src="../images/star.png" alt="star"></li>
+            <li class="star11"><img src="../images/star.png" alt="star"></li>
+            <li class="star11"><img src="../images/star.png" alt="star"></li>
+            <li class="star11"><img src="../images/star.png" alt="star"></li>
+            <li class="star11"><img src="../images/star.png" alt="star"></li>
+            <li class="star11"><img src="../images/star.png" alt="star"></li>
+            <li class="star12"><img src="../images/star.png" alt="star"></li>
+            <li class="star12"><img src="../images/star.png" alt="star"></li>
+            <li class="star12"><img src="../images/star.png" alt="star"></li>
+            <li class="star12"><img src="../images/star.png" alt="star"></li>
+            <li class="star12"><img src="../images/star.png" alt="star"></li>
+            <li class="star12"><img src="../images/star.png" alt="star"></li>
+            <li class="star12"><img src="../images/star.png" alt="star"></li>
+            <li class="star12"><img src="../images/star.png" alt="star"></li>
+            <li class="star12"><img src="../images/star.png" alt="star"></li>
+            <li class="star12"><img src="../images/star.png" alt="star"></li>
+            <li class="star12"><img src="../images/star.png" alt="star"></li>
+            <li class="star12"><img src="../images/star.png" alt="star"></li>
+            <li class="star12"><img src="../images/star.png" alt="star"></li>
+            <li class="star12"><img src="../images/star.png" alt="star"></li>
             <li class="star12"><img src="../images/star.png" alt="star"></li>
           </ul>
         </div>
         <div class="rewardsProducts">
-          <div class="productBlock"> <img src="../images/rp3.jpg"> <span class="price">$<span class="prc">5</span></span></div>
-          <div class="productBlock"> <img src="../images/rp3.jpg"> <span class="price">$<span class="prc">5</span></span></div>
-          <div class="productBlock"> <img src="../images/rp3.jpg"> <span class="price">$<span class="prc">5</span></span></div>
-          <div class="productBlock"> <img src="../images/rp3.jpg"> <span class="price">$<span class="prc">5</span></span></div>
-          <div class="totalSpend">Spend = $<span id="totalSpend">0</span></div>
+          <div class="productBlock"> <img src="../images/prd9.jpg"></div>
+          <div class="productBlock"> <img src="../images/prd10.jpg"></div>
+          <div class="totalSpend">Spend = $31.80</div>
         </div>
       </div>
       <a href="rewards7.php" class="continueBtn disable">Continue</a> </div>

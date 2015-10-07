@@ -24,22 +24,25 @@
 
       <div class="cf">
         <div class="rewardsProducts">
+          <div class="productBlock"> <img src="../images/rp1.jpg"></div>
+          <div class="productBlock"> <img src="../images/rp2.jpg"></div>
           <div class="productBlock"> <img src="../images/rp3.jpg"></div>
-          <div class="productBlock"> <img src="../images/rp3.jpg"></div>
-          <div class="productBlock"> <img src="../images/rp3.jpg"></div>
-          <div class="productBlock"> <img src="../images/rp3.jpg"></div>
-          <div class="productBlock"> <img src="../images/rp3.jpg"></div>
-          <div class="productBlock"> <img src="../images/rp3.jpg"></div>
-          <div class="productBlock"> <img src="../images/rp3.jpg"></div>
-          <div class="productBlock"> <img src="../images/rp3.jpg"></div>
-          
+          <div class="productBlock"> <img src="../images/rp4.jpg"></div>
+          <div class="productBlock"> <img src="../images/rp5.jpg"></div>
+          <div class="productBlock"> <img src="../images/rp6.jpg"></div>
+          <div class="productBlock"> <img src="../images/rp7.jpg"></div>
+          <div class="productBlock"> <img src="../images/rp8.jpg"></div>
+          <div class="productBlock"> <img src="../images/rp9.jpg"></div>
+          <div class="productBlock"> <img src="../images/rp10.jpg"></div>
+          <div class="productBlock"> <img src="../images/rp11.jpg"></div>
+          <div class="productBlock"> <img src="../images/rp12.jpg"></div>
         </div>
       </div>
       <a href="" class="continueBtn disable">Continue</a> </div>
   </div>
   <div class="progressBar">
     <div class="progressStep ra1 done"><span class="fillBG"></span></div>
-    <div class="progressStep ra2 done"><span class="fillBG"></span></div>
+    <div class="progressStep ra2"><span class="fillBG"></span></div>
     <div class="progressStep ra3"><span class="fillBG"></span></div>
     <div class="progressStep ra4"><span class="fillBG"></span></div>
     <div class="progressStep ra5"><span class="fillBG"></span></div>

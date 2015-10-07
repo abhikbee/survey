@@ -8,24 +8,25 @@ var totalSpend = price = cnt = prgBG = questionNo = 0
 /*================= On Document Load Start =================*/	
 $(document).ready( function(){
 	winHeight();
+	$('.loaderDiv .loader').animate({ width: '100%' }, 1000);
+	$('.loaderDiv').delay(1000).fadeOut();
 	if( $("#rewardsA").length){
 		//quesionno,cnt,prdCount,sectionName
-		if( $("#question1").length){qno = 1;cnt = 0; prdCount = 2; sectionName = 'ra1'; prgBG = 8.33+'%';}
-		if( $("#question2").length){qno = 2;cnt = 0; prdCount = 4; sectionName = 'ra1'; prgBG = 16.66+'%';}
-		if( $("#question3").length){qno = 3;cnt = 0; prdCount = 2; sectionName = 'ra1'; prgBG = 24.99+'%';}
-		if( $("#question4").length){qno = 4;cnt = 0; prdCount = 4; sectionName = 'ra1'; prgBG = 33.33+'%';}
-		if( $("#question5").length){qno = 5;cnt = 0; prdCount = 2; sectionName = 'ra1'; prgBG = 41.65+'%';}
-		if( $("#question6").length){qno = 6;cnt = 0; prdCount = 4; sectionName = 'ra1'; prgBG = 49.48+'%';}
-		if( $("#question7").length){qno = 7;cnt = 0; prdCount = 2; sectionName = 'ra1'; prgBG = 58.31+'%';}
-		if( $("#question8").length){qno = 8;cnt = 0; prdCount = 4; sectionName = 'ra1'; prgBG = 66.64+'%';}
-		if( $("#question9").length){qno = 9;cnt = 0; prdCount = 2; sectionName = 'ra1'; prgBG = 74.97+'%';}
-		if( $("#question10").length){qno = 10;cnt = 0; prdCount = 4; sectionName = 'ra1'; prgBG = 83.3+'%';}
-		if( $("#question11").length){qno = 11;cnt = 0; prdCount = 2; sectionName = 'ra1'; prgBG = 91.63+'%';}
-		if( $("#question12").length){qno = 12;cnt = 0; prdCount = 4; sectionName = 'ra1'; prgBG = 100+'%';}
+		if( $("#question1").length){qno = 1; prdCount = 1; sectionName = 'ra1'; prgBG = 8.33+'%';}
+		if( $("#question2").length){qno = 2; prdCount = 3; sectionName = 'ra1'; prgBG = 16.66+'%';}
+		if( $("#question3").length){qno = 3; prdCount = 2; sectionName = 'ra1'; prgBG = 24.99+'%';}
+		if( $("#question4").length){qno = 4; prdCount = 1; sectionName = 'ra1'; prgBG = 33.33+'%';}
+		if( $("#question5").length){qno = 5; prdCount = 1; sectionName = 'ra1'; prgBG = 41.65+'%';}
+		if( $("#question6").length){qno = 6; prdCount = 2; sectionName = 'ra1'; prgBG = 49.48+'%';}
+		if( $("#question7").length){qno = 7; prdCount = 2; sectionName = 'ra1'; prgBG = 58.31+'%';}
+		if( $("#question8").length){qno = 8; prdCount = 2; sectionName = 'ra1'; prgBG = 66.64+'%';}
+		if( $("#question9").length){qno = 9; prdCount = 1; sectionName = 'ra1'; prgBG = 74.97+'%';}
+		if( $("#question10").length){qno = 10; prdCount = 1; sectionName = 'ra1'; prgBG = 83.3+'%';}
+		if( $("#question11").length){qno = 11; prdCount = 2; sectionName = 'ra1'; prgBG = 91.63+'%';}
+		if( $("#question12").length){qno = 12; prdCount = 2; sectionName = 'ra1'; prgBG = 100+'%';}
 		qRequest = '#question'+qno+' .continueBtn';
 		starR = '#question'+qno+' .star'+qno;
 		quesBtn = $(qRequest);
-		$('.loaderDiv').delay(500).fadeOut();
 		sName = '.' + sectionName + ' .fillBG';
 		$(sName).css({'height':prgBG});
 		$(document).on({click: function () {
@@ -33,27 +34,21 @@ $(document).ready( function(){
 		  if ($(this).hasClass('checkPrd')) {
 			   $(this).removeClass('checkPrd');
 			   $(this).find('.checked').remove();
-			   price = parseInt($(this).find('.prc').text());
-			   totalSpend = parseInt($('.totalSpend #totalSpend').text());
-			   total =  totalSpend - price;
-			  $('#totalSpend').html(total);
 			   cnt--;
 		  } else {
 			   $(this).addClass('checkPrd');
 			   $(this).append('<span class="checked">Checked</span>');
-			   price = parseInt($(this).find('.prc').text());
-			   totalSpend = parseInt($('.totalSpend #totalSpend').text());
-			   total =  totalSpend + price;
-			   $('#totalSpend').html(total);
 			   cnt++;
 		  }
 		  if (cnt == prdCount) {
 			  quesBtn.removeClass('disable').addClass("enable");
 			  $(starR).addClass('active');
+			  $('.totalSpend').fadeIn()
 			  qno++;
 		  }else {
 			  quesBtn.removeClass('enable').addClass("disable");
 			  $(starR).removeClass('active');
+			  $('.totalSpend').fadeOut()
 		  }
 		  return false;
 	   }}, '.productBlock');
@@ -61,22 +56,21 @@ $(document).ready( function(){
 	}
 	if( $("#rewardsB").length){
 		//quesionno,cnt,prdCount,sectionName
-		if( $("#question1").length){qno = 1;cnt = 0; prdCount = 2; sectionName = 'ra2'; prgBG = 8.33+'%';}
-		if( $("#question2").length){qno = 2;cnt = 0; prdCount = 4; sectionName = 'ra2'; prgBG = 16.66+'%';}
-		if( $("#question3").length){qno = 3;cnt = 0; prdCount = 2; sectionName = 'ra2'; prgBG = 24.99+'%';}
-		if( $("#question4").length){qno = 4;cnt = 0; prdCount = 4; sectionName = 'ra2'; prgBG = 33.33+'%';}
-		if( $("#question5").length){qno = 5;cnt = 0; prdCount = 2; sectionName = 'ra2'; prgBG = 41.65+'%';}
-		if( $("#question6").length){qno = 6;cnt = 0; prdCount = 4; sectionName = 'ra2'; prgBG = 49.48+'%';}
-		if( $("#question7").length){qno = 7;cnt = 0; prdCount = 2; sectionName = 'ra2'; prgBG = 58.31+'%';}
-		if( $("#question8").length){qno = 8;cnt = 0; prdCount = 4; sectionName = 'ra2'; prgBG = 66.64+'%';}
-		if( $("#question9").length){qno = 9;cnt = 0; prdCount = 2; sectionName = 'ra2'; prgBG = 74.97+'%';}
-		if( $("#question10").length){qno = 10;cnt = 0; prdCount = 4; sectionName = 'ra2'; prgBG = 83.3+'%';}
-		if( $("#question11").length){qno = 11;cnt = 0; prdCount = 2; sectionName = 'ra2'; prgBG = 91.63+'%';}
-		if( $("#question12").length){qno = 12;cnt = 0; prdCount = 4; sectionName = 'ra2'; prgBG = 100+'%';}
+		if( $("#question1").length){qno = 1; prdCount = 1; sectionName = 'ra2'; prgBG = 8.33+'%';}
+		if( $("#question2").length){qno = 2; prdCount = 3; sectionName = 'ra2'; prgBG = 16.66+'%';}
+		if( $("#question3").length){qno = 3; prdCount = 2; sectionName = 'ra2'; prgBG = 24.99+'%';}
+		if( $("#question4").length){qno = 4; prdCount = 1; sectionName = 'ra2'; prgBG = 33.33+'%';}
+		if( $("#question5").length){qno = 5; prdCount = 1; sectionName = 'ra2'; prgBG = 41.65+'%';}
+		if( $("#question6").length){qno = 6; prdCount = 2; sectionName = 'ra2'; prgBG = 49.48+'%';}
+		if( $("#question7").length){qno = 7; prdCount = 2; sectionName = 'ra2'; prgBG = 58.31+'%';}
+		if( $("#question8").length){qno = 8; prdCount = 2; sectionName = 'ra2'; prgBG = 66.64+'%';}
+		if( $("#question9").length){qno = 9; prdCount = 1; sectionName = 'ra2'; prgBG = 74.97+'%';}
+		if( $("#question10").length){qno = 10; prdCount = 1; sectionName = 'ra2'; prgBG = 83.3+'%';}
+		if( $("#question11").length){qno = 11; prdCount = 2; sectionName = 'ra2'; prgBG = 91.63+'%';}
+		if( $("#question12").length){qno = 12; prdCount = 2; sectionName = 'ra2'; prgBG = 100+'%';}
 		qRequest = '#question'+qno+' .continueBtn';
 		starR = '#question'+qno+' .star'+qno;
 		quesBtn = $(qRequest);
-		$('.loaderDiv').delay(500).fadeOut();
 		sName = '.' + sectionName + ' .fillBG';
 		$(sName).css({'height':prgBG});
 		$(document).on({click: function () {
@@ -84,18 +78,10 @@ $(document).ready( function(){
 		  if ($(this).hasClass('checkPrd')) {
 			   $(this).removeClass('checkPrd');
 			   $(this).find('.checked').remove();
-			   price = parseInt($(this).find('.prc').text());
-			   totalSpend = parseInt($('.totalSpend #totalSpend').text());
-			   total =  totalSpend - price;
-			  $('#totalSpend').html(total);
 			   cnt--;
 		  } else {
 			   $(this).addClass('checkPrd');
 			   $(this).append('<span class="checked">Checked</span>');
-			   price = parseInt($(this).find('.prc').text());
-			   totalSpend = parseInt($('.totalSpend #totalSpend').text());
-			   total =  totalSpend + price;
-			  $('#totalSpend').html(total);
 			   cnt++;
 		  }
 		  if (cnt == prdCount) {
@@ -111,9 +97,6 @@ $(document).ready( function(){
 	   
 	}
 	if( $("#questionADone").length){
-		prgBG = 100+'%';
-		$('.ra1 .fillBG').css({'height':prgBG});
-		$('.loaderDiv').delay(500).fadeOut();
 		$(document).on({click: function () {
 		
 		  if ($(this).hasClass('checkPrd')) {
@@ -134,9 +117,6 @@ $(document).ready( function(){
 	}
 	
 	if( $("#questionBDone").length){
-		prgBG = 100+'%';
-		$('.ra1 .fillBG, .ra2 .fillBG').css({'height':prgBG});
-		$('.loaderDiv').delay(500).fadeOut();
 		$(document).on({click: function () {
 		
 		  if ($(this).hasClass('checkPrd')) {

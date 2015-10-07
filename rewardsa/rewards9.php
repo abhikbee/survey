@@ -38,9 +38,8 @@
           </ul>
         </div>
         <div class="rewardsProducts">
-          <div class="productBlock"> <img src="../images/rp1.jpg"> <span class="price">$<span class="prc">5</span></span></div>
-          <div class="productBlock"> <img src="../images/rp2.jpg"> <span class="price">$<span class="prc">5</span></span></div>
-          <div class="totalSpend">Spend = $<span id="totalSpend">0</span></div>
+          <div class="productBlock prdCenter"> <img src="../images/prd15.jpg"></div>
+          <div class="totalSpend">Spend = $47.65</div>
         </div>
       </div>
       <a href="rewards10.php" class="continueBtn disable">Continue</a> </div>

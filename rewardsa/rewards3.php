@@ -38,9 +38,9 @@
           </ul>
         </div>
         <div class="rewardsProducts">
-          <div class="productBlock"> <img src="../images/rp1.jpg"> <span class="price">$<span class="prc">5</span></span></div>
-          <div class="productBlock"> <img src="../images/rp2.jpg"> <span class="price">$<span class="prc">5</span></span></div>
-          <div class="totalSpend">Spend = $<span id="totalSpend">0</span></div>
+          <div class="productBlock"> <img src="../images/prd5.jpg"></div>
+          <div class="productBlock"> <img src="../images/prd6.jpg"></div>
+          <div class="totalSpend">Spend = $21.50</div>
         </div>
       </div>
       <a href="rewards4.php" class="continueBtn disable">Continue</a> </div>
