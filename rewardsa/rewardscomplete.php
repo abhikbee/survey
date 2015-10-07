@@ -20,7 +20,8 @@
     </div>
     <div class="question" id="questionADone">
     	<h1>Congratulations!</h1>
-       <p>You’ve collected 12 stars under Rewards A – You’re next drink is on us. Please select one free item and click the Continue button to proceed.</p>
+       <p> You’ve collected 12 stars under Rewards A – You’re next drink is on us. Please select one free item and click the Continue button to proceed.
+</p>
 
       <div class="cf">
         <div class="rewardsProducts">

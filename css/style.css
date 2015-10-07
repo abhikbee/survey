@@ -28,8 +28,8 @@ p,h1,h2,h3,h4,h5,h6, ul,ol,dd,table,fieldset,address {margin: 0 0 20px;}
 .message.error {color: #a94442;background-color: #f2dede;border-color: #ebccd1;}
 .message.error a{color: #843534;}
 /********** Layout **********/
-.container { margin:0 auto; width:100%; max-width:960px;}
-.slideBlock { text-align:center; font-size:18px; font-weight:300; position:relative;padding:40px 0} 
+.container { margin:0 auto; width:100%; max-width:1024px;}
+.slideBlock { text-align:center; font-size:18px; font-weight:300; position:relative;padding:30px 0} 
 .slideBlock .glass { position:absolute; left:20px; bottom:20px;}
 .slideBlock p { margin-bottom:50px}
 #intro { background-color:#595a5c; color:#fff;}
@@ -37,7 +37,7 @@ p,h1,h2,h3,h4,h5,h6, ul,ol,dd,table,fieldset,address {margin: 0 0 20px;}
 .emailForm { text-align:center;}
 .emailForm .inputBox { margin:0 auto 30px;}
 .emailForm .message { max-width:450px; margin:0 auto 10px;}
-.continueBtn { width:170px; height:50px; line-height:50px; border:none; background:#e3c383;font-family: 'Crete Round', serif; font-size:24px; color:#0f0f0f; font-weight:normal;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; text-decoration:none; display:block; margin:0 auto}
+.continueBtn { width:170px; height:50px; line-height:50px; border:none; background:#e3c383;font-family: 'Crete Round', serif; font-size:24px; color:#0f0f0f; font-weight:normal;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; text-decoration:none; display:block; margin:0 auto; cursor:pointer}
 .continueBtn:disabled, .continueBtn.disable {background: #dddddd; opacity:0.5}
 .progressBar { position:fixed; right:40px; top:40px; width:5px; background-color:#dcdcdc;}
 .progressBar .progressStep {width:100%; position:relative;}
@@ -49,17 +49,16 @@ p,h1,h2,h3,h4,h5,h6, ul,ol,dd,table,fieldset,address {margin: 0 0 20px;}
 .progressBar .done .fillBG {height:100%}
 .loaderDiv {position:fixed; left:0; top:0; width:100%; height:100%; background-color:#fff; z-index:9999}
 .loader {position:absolute; left:0; top:0; width:0; height:5px; position: relative;text-indent: -9999em; background-color:#24bd53}
-
-
-/*Rewards A*/
-.rewardsAStar {-webkit-box-shadow:0 0 3px 0 rgba(0, 0, 0, 0.2);-moz-box-shadow:0 0 3px 0 rgba(0, 0, 0, 0.2);box-shadow:0 0 3px 0 rgba(0, 0, 0, 0.2); float:left; width:40%; background-color:#fff; margin-bottom:50px}
+/*Rewards*/
+.rewardsAStar {-webkit-box-shadow:0 0 3px 0 rgba(0, 0, 0, 0.2);-moz-box-shadow:0 0 3px 0 rgba(0, 0, 0, 0.2);box-shadow:0 0 3px 0 rgba(0, 0, 0, 0.2); float:left; width:50%; background-color:#fff; margin-bottom:50px}
 .rewardsAStar ul { list-style:none; margin:0; padding:15px}
-.rewardsAStar li { float:left; width:25%; padding:7px 0}
+#rewardsB .rewardsAStar ul { padding:48px 15px}
+.rewardsAStar li { float:left; width:25%; padding:5px 0}
 .rewardsAStar img { background-color:#e4e4e4}
 .rewardsAStar .active img { background-color:#dbbb7e}
-
-.rewardsProducts { float:right; width:56%; margin-bottom:30px;}
-.productBlock { float:left; width:46%; margin:0 2% 25px; border:3px solid #dcdcdc;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px; position:relative; cursor:pointer;}
+.rewardsProducts { float:right; width:48%; margin-bottom:30px;}
+.productBlock { float:left; width:48%; margin:0 1% 25px; border:3px solid #dcdcdc;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px; position:relative; cursor:pointer;}
+.productBlock img { width:100%}
 .prdCenter { float:none; margin:0 auto 25px}
 .checked { background:url(../images/cheched.png) no-repeat; width:30px; height:30px; text-indent:-1000px; overflow:hidden; text-align:left; display:block; position:absolute; right:-13px; top:-13px}
 .price { background:#dcdcdc; display:block; position:absolute; left:50%; bottom:0; line-height:32px; width:65px; margin-left:-32px;-moz-border-radius-topleft: 5px;-webkit-border-top-left-radius: 5px; border-top-left-radius: 5px;-moz-border-radius-topright: 5px;-webkit-border-top-right-radius: 5px;border-top-right-radius: 5px; font-size:20px; font-weight:bold; color:#000000; padding-top:3px;}
@@ -68,6 +67,28 @@ p,h1,h2,h3,h4,h5,h6, ul,ol,dd,table,fieldset,address {margin: 0 0 20px;}
 .totalSpend{clear:both; font-size:24px; color:#000; text-align:center; font-family: 'Crete Round', serif; display:none;}
 #questionADone .rewardsProducts, #questionBDone .rewardsProducts { float:none; width:auto;}
 #questionADone .productBlock, #questionBDone .productBlock {width:23%; margin:0 1% 25px}
-
 /*Reward B*/
 #rewardsB .rewardsAStar li { width:4%}
+
+/*scale*/
+
+.icheckbox,.iradio {display:block;vertical-align: middle;margin:0 auto 5px;padding: 0;width:26px;height:26px;border:1px solid #c9c9c9;cursor: pointer;-webkit-border-radius: 50%;-moz-border-radius:50%;border-radius:50%; position:relative !important;}
+
+.icheckbox, .iradio {}
+.icheckbox.hover, .iradio.hover {border-color:#dbbb7e;}
+.icheckbox.checked, .iradio.checked {background:#dbbb7e;border-color:#dbbb7e; right:0; top:0}
+.icheckbox.disabled, .iradio.disabled {cursor: default;}
+.icheckbox.checked.disabled, .iradio.checked.disabled {}
+
+
+#scale {}
+.rewardAForm, .rewardBForm {float:left; width:48%;}
+.scaleForm { -webkit-box-shadow:0 0 3px 0 rgba(0, 0, 0, 0.2);-moz-box-shadow:0 0 3px 0 rgba(0, 0, 0, 0.2);box-shadow:0 0 3px 0 rgba(0, 0, 0, 0.2); background-color:#fff; text-align:left; padding:10px;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px; margin-bottom:30px;}
+.rewardBForm{float:right}
+.rewardAForm h2, .rewardBForm h2 { text-align:center; font-size:28px;} 
+.scaleForm h3 { font-size:16px; line-height:normal; color:#3d3935; font-weight:normal;font-family: 'Lato', Arial, Helvetica, sans-serif; background:url(../images/bullet.jpg) no-repeat left 8px; margin:0; padding:0 0 15px 20px}
+.scaleForm .formRow { margin-bottom:20px;}
+.scaleForm label { cursor:pointer}
+.scaleUL { list-style:none; margin:0; padding:0;}
+.scaleUL li{float:left; width:18%; font-size:13px; font-weight:normal; line-height:normal; text-align:center; position:relative;}
+.scaleUL li .value {position:absolute; left:0; top:0; width:100%; z-index:99; line-height:25px;}

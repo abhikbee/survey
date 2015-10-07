@@ -20,7 +20,8 @@
     </div>
     <div class="question" id="questionBDone">
     	<h1>Congratulations!</h1>
-       <p>You’ve collected 12 stars under Rewards A – You’re next drink is on us. Please select one free item and click the Continue button to proceed.</p>
+       <p>You’ve collected 125 stars under Rewards B – You’re next drink is on us. Please select one free item and click the Continue button to proceed.
+</p>
 
       <div class="cf">
         <div class="rewardsProducts">
@@ -38,11 +39,11 @@
           <div class="productBlock"> <img src="../images/rp12.jpg"></div>
         </div>
       </div>
-      <a href="" class="continueBtn disable">Continue</a> </div>
+      <a href="../scale.php" class="continueBtn disable">Continue</a> </div>
   </div>
   <div class="progressBar">
     <div class="progressStep ra1 done"><span class="fillBG"></span></div>
-    <div class="progressStep ra2"><span class="fillBG"></span></div>
+    <div class="progressStep ra2 done"><span class="fillBG"></span></div>
     <div class="progressStep ra3"><span class="fillBG"></span></div>
     <div class="progressStep ra4"><span class="fillBG"></span></div>
     <div class="progressStep ra5"><span class="fillBG"></span></div>

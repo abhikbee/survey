@@ -9,7 +9,6 @@ var totalSpend = price = cnt = prgBG = questionNo = 0
 $(document).ready( function(){
 	winHeight();
 	$('.loaderDiv .loader').animate({ width: '100%' }, 1000);
-	$('.loaderDiv').delay(1000).fadeOut();
 	if( $("#rewardsA").length){
 		//quesionno,cnt,prdCount,sectionName
 		if( $("#question1").length){qno = 1; prdCount = 1; sectionName = 'ra1'; prgBG = 8.33+'%';}
@@ -115,7 +114,6 @@ $(document).ready( function(){
 		  return false;
 	   }}, '.productBlock');
 	}
-	
 	if( $("#questionBDone").length){
 		$(document).on({click: function () {
 		
@@ -135,8 +133,17 @@ $(document).ready( function(){
 		  return false;
 	   }}, '.productBlock');
 	}
-	
 	$(document).on({click: function () {return false;}}, '.continueBtn.disable');
+	
+	if( $(".icheck").length){	
+		$('input.icheck').iCheck({
+			checkboxClass: 'icheckbox',
+			radioClass: 'iradio',
+			uncheckedClass: 'unChecked',
+		});
+	}
+	
+	
 	
 	
 	
@@ -151,7 +158,7 @@ $(window).bind('resize orientationchange', function() {
 });
 
 $(window).load(function() {
-	
+	$('.loaderDiv').fadeOut();
 	checkCookie();
 });
 

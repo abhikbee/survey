@@ -19,7 +19,7 @@
       <div class="loader">Loading...</div>
     </div>
     <div class="question" id="question3">
-      <p>You visit Starbucks and purchased a Tall Latte costing $2.85. As a member of Starbucks Rewards A, you can get any food or drink item free with 12 stars. Please click on the items that you purchased to collect stars under Rewards A.</p>
+      <p>You visit Starbucks and purchased a Venti Chai Tea Latte, Grande Mocha costing $8.20. As a member of Starbucks Rewards A, you can get any food or drink item free with 125 stars. Please click on the items that you purchased to collect stars under Rewards A.</p>
       <div class="cf">
         <div class="rewardsAStar">
           <ul>
