@@ -130,3 +130,10 @@ p,h1,h2,h3,h4,h5,h6, ul,ol,dd,table,fieldset,address {margin: 0 0 20px;}
 #thankyou h1 { margin-bottom:50px;}
 #thankyou p { margin-bottom:20px;}
 #thankyou .resultBlock { background-color:#768624; margin:0 50px 25px; padding:15px 15px 1px;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;}
+
+/**/
+#buyNowSection .productBlock .icheckbox { width:30px; height:30px; text-indent:-1000px; overflow:hidden; text-align:left; display:block; position:absolute !important; right:-12px; top:-12px; border:none}
+#buyNowSection .productBlock .layer { position:absolute; left:0; top:0; width:100%; height:100%; cursor:pointer} 
+#buyNowSection .productBlock .icheckbox.checked { background:url(../images/cheched.png) no-repeat;}
+#buyNowSection .productBlock.activeDiv { border-color:#24bd53;}
+#buyNowSection .totalSpend { display:block}

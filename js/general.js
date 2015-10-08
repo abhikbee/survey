@@ -168,8 +168,15 @@ $(document).ready( function(){
 			uncheckedClass: 'unChecked',
 		});
 	}
-	
-	
+	if( $("#buyNowSection").length){
+		$('input').on('ifChecked', function(event){
+		  $(this).parents().addClass('activeDiv');
+	   });
+	   $('input').on('ifUnchecked', function(event){
+		  $(this).parents().removeClass('activeDiv');
+	   });
+	   
+	}
 
 	
 	
