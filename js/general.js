@@ -133,6 +133,20 @@ $(document).ready( function(){
 		  return false;
 	   }}, '.productBlock');
 	}
+	
+	if( $("#rewardPreferred").length){
+		$(document).on({click: function () {
+		  $('.rewardPreferred .rewardsAStar .checked').remove();
+		  $('.rewardPreferred .rewardsAStar').removeClass('checkPrd');
+		  $(this).addClass('checkPrd');
+		  $(this).append('<span class="checked">Checked</span>');
+		  $('.continueBtn').removeAttr('disabled');
+		  $(this).next().attr('checked', 'checked');
+		  
+		  return false;
+	   }}, '.rewardsAStar');
+	}
+	
 	$(document).on({click: function () {return false;}}, '.continueBtn.disable');
 	
 	if( $(".icheck").length){	
@@ -144,6 +158,7 @@ $(document).ready( function(){
 	}
 	
 	
+
 	
 	
 	

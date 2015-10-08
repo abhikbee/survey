@@ -18,7 +18,7 @@ ul {padding:0 0 0 15px;}
 ol { padding:0 0 0 20px}
 ul ul,ol ol { margin:10px 0}
 ul.bulletText { list-style:none; padding:0;}
-ul.bulletText li {background:url(../images/right-arrow.gif) no-repeat left 7px;padding:2px 0 2px 15px;}
+ul.bulletText li {background:url(<?php echo $siteurl; ?>images/right-arrow.gif) no-repeat left 7px;padding:2px 0 2px 15px;}
 p,h1,h2,h3,h4,h5,h6, ul,ol,dd,table,fieldset,address {margin: 0 0 20px;}
 .inputBox {-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; border:none; border-bottom:3px solid #fff; max-width:450px; width:100%; padding:10px 20px; line-height:30px;background:rgba(255,255,255,0.4); display:block; font-size:18px; font-weight:normal; color:#fff}
 /********** Image Formating & Alignment **********/
@@ -60,7 +60,7 @@ p,h1,h2,h3,h4,h5,h6, ul,ol,dd,table,fieldset,address {margin: 0 0 20px;}
 .productBlock { float:left; width:48%; margin:0 1% 25px; border:3px solid #dcdcdc;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px; position:relative; cursor:pointer;}
 .productBlock img { width:100%}
 .prdCenter { float:none; margin:0 auto 25px}
-.checked { background:url(../images/cheched.png) no-repeat; width:30px; height:30px; text-indent:-1000px; overflow:hidden; text-align:left; display:block; position:absolute; right:-13px; top:-13px}
+.checked { background:url(<?php echo $siteurl; ?>images/cheched.png) no-repeat; width:30px; height:30px; text-indent:-1000px; overflow:hidden; text-align:left; display:block; position:absolute; right:-13px; top:-13px}
 .price { background:#dcdcdc; display:block; position:absolute; left:50%; bottom:0; line-height:32px; width:65px; margin-left:-32px;-moz-border-radius-topleft: 5px;-webkit-border-top-left-radius: 5px; border-top-left-radius: 5px;-moz-border-radius-topright: 5px;-webkit-border-top-right-radius: 5px;border-top-right-radius: 5px; font-size:20px; font-weight:bold; color:#000000; padding-top:3px;}
 .checkPrd { border-color:#24bd53;}
 .checkPrd .price { background-color:#24bd53; color:#fff}
@@ -68,7 +68,7 @@ p,h1,h2,h3,h4,h5,h6, ul,ol,dd,table,fieldset,address {margin: 0 0 20px;}
 #questionADone .rewardsProducts, #questionBDone .rewardsProducts { float:none; width:auto;}
 #questionADone .productBlock, #questionBDone .productBlock {width:23%; margin:0 1% 25px}
 /*Reward B*/
-#rewardsB .rewardsAStar li { width:4%}
+#rewardsB .rewardsAStar li, .rewardBPreferred .rewardsAStar li{ width:4%}
 
 /*scale*/
 
@@ -86,9 +86,21 @@ p,h1,h2,h3,h4,h5,h6, ul,ol,dd,table,fieldset,address {margin: 0 0 20px;}
 .scaleForm { -webkit-box-shadow:0 0 3px 0 rgba(0, 0, 0, 0.2);-moz-box-shadow:0 0 3px 0 rgba(0, 0, 0, 0.2);box-shadow:0 0 3px 0 rgba(0, 0, 0, 0.2); background-color:#fff; text-align:left; padding:10px;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px; margin-bottom:30px;}
 .rewardBForm{float:right}
 .rewardAForm h2, .rewardBForm h2 { text-align:center; font-size:28px;} 
-.scaleForm h3 { font-size:16px; line-height:normal; color:#3d3935; font-weight:normal;font-family: 'Lato', Arial, Helvetica, sans-serif; background:url(../images/bullet.jpg) no-repeat left 8px; margin:0; padding:0 0 15px 20px}
+.scaleForm h3 { font-size:16px; line-height:normal; color:#3d3935; font-weight:normal;font-family: 'Lato', Arial, Helvetica, sans-serif; background:url(<?php echo $siteurl; ?>images/bullet.jpg) no-repeat left 8px; margin:0; padding:0 0 15px 20px}
 .scaleForm .formRow { margin-bottom:20px;}
 .scaleForm label { cursor:pointer}
 .scaleUL { list-style:none; margin:0; padding:0;}
 .scaleUL li{float:left; width:18%; font-size:13px; font-weight:normal; line-height:normal; text-align:center; position:relative;}
 .scaleUL li .value {position:absolute; left:0; top:0; width:100%; z-index:99; line-height:25px;}
+
+/**/
+.rewardPreferred { margin:0 -20px 30px}
+.rewardAPreferred, .rewardBPreferred { float:left; padding:0 20px;}
+.rewardAPreferred .rewardsAStar, .rewardBPreferred .rewardsAStar { float:none; width:auto;}
+.rewardAPreferred {width:40%}
+.rewardBPreferred {width:60%}
+.rewardBPreferred .rewardsAStar ul { padding:48px 15px;}
+.rewardPreferred .rewardsAStar { position:relative;border:3px solid #fff; cursor:pointer}
+.rewardPreferred #rewardsa, .rewardPreferred #rewardsb { visibility:hidden}
+.rewardPreferred label {font-family: 'Crete Round', serif; font-size:28px}
+.rewardPreferred .rewardsAStar.checkPrd { border-color:#24bd53;}

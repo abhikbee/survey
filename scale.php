@@ -1,7 +1,6 @@
 <?php
-session_start();
-//echo $_SESSION['login_user'];
-include('db.php');
+include('config.php');
+$email = $_SESSION['login_user'];
 $opError = $asg1 =  $asg2 =  $asg3 =  $asg4 =  $asg5 = $bsg1 =  $bsg2 =  $bsg3 =  $bsg4 =  $bsg5= '';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	if (isset($_POST['asg1'])){$asg1 = trim($_POST['asg1']);}else {$hasError = true;}
@@ -17,9 +16,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	
 	
 	if (!isset($hasError)) {
+		$sql = "INSERT INTO scale (`email`, `quesion_a1`, `quesion_a2`, `quesion_a3`, `quesion_a4`, `quesion_a5`, `quesion_b1`, `quesion_b2`, `quesion_b3`, `quesion_b4`, `quesion_b5`) VALUES ('".$email."', '".$asg1."', '".$asg2."', '".$asg3."', '".$asg4."', '".$asg5."', '".$bsg1."', '".$bsg2."', '".$bsg3."', '".$bsg4."', '".$bsg5."')";
+		//echo $sql;
+			if ($conn->query($sql) === TRUE) {
+				//echo "New record created successfully";
+				header('Location: preferred.php');
+			} else {
+				echo "Error: " . $sql . "<br>" . $conn->error;
+			}
 		
-		echo 'jay';
-		
+		//header('Location: preferred.php');		
 	} else {
 		$opError = '<div class="message error">Please select one option in question.</div>';
 	}
@@ -32,9 +38,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <title>Starbucks Survey</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <link href='https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic|Crete+Round:400,400italic' rel='stylesheet' type='text/css'>
-<link type="text/css" href="css/style.css" rel="stylesheet">
-<script src="js/modernizr.js" type="text/javascript"></script>
-<script type="text/javascript" src="js/jquery.min.js"></script>
+<link type="text/css" href="<?php echo $siteurl; ?>css/style.css" rel="stylesheet">
+<script src="<?php echo $siteurl; ?>js/modernizr.js" type="text/javascript"></script>
+<script type="text/javascript" src="<?php echo $siteurl; ?>js/jquery.min.js"></script>
 <!--[if lte IE 9]>
   <script src="js/ie.js" type="text/javascript"></script>
 <![endif]-->
@@ -44,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <div class="loaderDiv">
       <div class="loader">Loading...</div>
     </div>
- <img src="images/glass.png" alt="" class="glass">
+ <img src="<?php echo $siteurl; ?>images/glass.png" alt="" class="glass">
   <div class="container">
     <form name="rewardAForm" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
       <?php echo $opError; ?>
@@ -323,7 +329,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="progressStep ra5"><span class="fillBG"></span></div>
   </div>
 </section>
-<script type="text/javascript" src="js/app.js"></script> 
-<script type="text/javascript" src="js/general.js"></script>
+<script type="text/javascript" src="<?php echo $siteurl; ?>js/app.js"></script> 
+<script type="text/javascript" src="<?php echo $siteurl; ?>js/general.js"></script>
 </body>
 </html>
