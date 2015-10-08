@@ -22,10 +22,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 <?php include('../inc/header.php'); ?>
 <section class="slideBlock" id="choicePage">
-  <div class="loaderDiv">
-    <div class="loader">Loading...</div>
-  </div>
-  <img src="<?php echo $siteurl; ?>images/glass.png" alt="" class="glass">
   <div class="container">
     <p class="desc">Please click Choice A to avail (Enter dollar value) and one star under this reward structure or click Choice B to avail (Enter dollar value)</p>
     <form name="rewardPreferred" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
@@ -46,7 +42,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               <?php } ?>
             </ul>
           </div>
-          
           <div class="choiceRadio">
             <input class="icheck" type="radio" name="choice" value="Choice B" id="choiceB">
             <label for="choiceB">Choice B</label>

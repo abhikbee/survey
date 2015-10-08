@@ -1,15 +1,10 @@
 <?php include('../inc/config.php'); ?>
 <?php include('../inc/header.php'); ?>
-<section class="slideBlock"><img src="<?php echo $siteurl; ?>images/glass.png" alt="" class="glass">
+<section class="slideBlock">
   <div class="container">
-    <div class="loaderDiv">
-      <div class="loader">Loading...</div>
-    </div>
     <div class="question" id="questionBDone">
-    	<h1>Congratulations!</h1>
-       <p>You’ve collected 125 stars under Rewards B – You’re next drink is on us. Please select one free item and click the Continue button to proceed.
-</p>
-
+      <h1>Congratulations!</h1>
+      <p>You’ve collected 125 stars under Rewards B – You’re next drink is on us. Please select one free item and click the Continue button to proceed. </p>
       <div class="cf">
         <div class="rewardsProducts">
           <div class="productBlock"> <img src="<?php echo $siteurl; ?>images/rp1.jpg"></div>

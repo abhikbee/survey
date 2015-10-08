@@ -1,10 +1,7 @@
 <?php include('../inc/config.php'); ?>
 <?php include('../inc/header.php'); ?>
-<section class="slideBlock" id="rewardsA"><img src="<?php echo $siteurl; ?>images/glass.png" alt="" class="glass">
+<section class="slideBlock" id="rewardsA">
   <div class="container">
-    <div class="loaderDiv">
-      <div class="loader">Loading...</div>
-    </div>
     <div class="question" id="question4">
       <p>You visit Starbucks and purchased a Grande Cappuccino costing $2.95. As a member of Starbucks Rewards A, you can get any food or drink item free with 12 stars. Please click on the items that you purchased to collect stars under Rewards A.</p>
       <div class="cf">

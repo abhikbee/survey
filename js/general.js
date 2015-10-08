@@ -28,6 +28,7 @@ $(document).ready( function(){
 		quesBtn = $(qRequest);
 		sName = '.' + sectionName + ' .fillBG';
 		$(sName).css({'height':prgBG});
+		
 		$(document).on({click: function () {
 		  ids = '#question' + qno + ' .totalSpend';
 		  if ($(this).hasClass('checkPrd')) {

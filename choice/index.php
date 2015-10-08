@@ -21,10 +21,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 <?php include('../inc/header.php'); ?>
 <section class="slideBlock" id="choicePage">
-  <div class="loaderDiv">
-    <div class="loader">Loading...</div>
-  </div>
-  <img src="<?php echo $siteurl; ?>images/glass.png" alt="" class="glass">
   <div class="container">
     <p class="desc">Please click Choice A to avail (Enter dollar value) and one star under this reward structure or click Choice B to avail (Enter dollar value)</p>
     <form name="rewardPreferred" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
@@ -33,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           <div class="starPrice">$5</div>
           <div class="rewardsAStar">
             <ul>
-             <?php $active = 1; for ($cnt = 1; $cnt <= 12; $cnt++) { ?>
+              <?php $active = 1; for ($cnt = 1; $cnt <= 12; $cnt++) { ?>
               <li class="star1 <?php if ($cnt <= $active) {echo "active";} ?>"><img src="<?php echo $siteurl; ?>images/star.png" alt="star"></li>
               <?php } ?>
             </ul>

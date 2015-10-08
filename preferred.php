@@ -23,14 +23,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 <?php include('inc/header.php'); ?>
 <section class="slideBlock" id="rewardPreferred">
-  <div class="loaderDiv">
-    <div class="loader">Loading...</div>
-  </div>
-  <img src="<?php echo $siteurl; ?>images/glass.png" alt="" class="glass">
   <div class="container">
-  	
     <form name="rewardPreferred" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
-    <p class="title">Please select your preferred rewards program</p>
+      <p class="title">Please select your preferred rewards program</p>
       <?php echo $opError; ?>
       <div class="cf rewardPreferred">
         <div class="rewardAPreferred">

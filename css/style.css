@@ -37,8 +37,11 @@ p,h1,h2,h3,h4,h5,h6, ul,ol,dd,table,fieldset,address {margin: 0 0 20px;}
 .emailForm { text-align:center;}
 .emailForm .inputBox { margin:0 auto 30px;}
 .emailForm .message { max-width:450px; margin:0 auto 10px;}
-.continueBtn { width:170px; height:50px; line-height:50px; border:none; background:#e3c383;font-family: 'Crete Round', serif; font-size:24px; color:#0f0f0f; font-weight:normal;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; text-decoration:none; display:block; margin:0 auto; cursor:pointer}
+.continueBtn { width:170px; height:50px; line-height:50px; border:none; background:#e3c383;font-family: 'Crete Round', serif; font-size:24px; color:#0f0f0f; font-weight:normal;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; text-decoration:none; display:inline-block; margin:0 auto; cursor:pointer; margin:0 5px;}
 .continueBtn:disabled, .continueBtn.disable {background: #dddddd; opacity:0.5}
+
+.buyNow { width:170px; height:50px; line-height:50px; border:none; background:#24bd53;font-family: 'Crete Round', serif; font-size:24px; color:#0f0f0f; font-weight:normal;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; text-decoration:none; display:inline-block; margin:0 auto; cursor:pointer; margin:0 5px;}
+
 .progressBar { position:fixed; right:40px; top:40px; width:5px; background-color:#dcdcdc;}
 .progressBar .progressStep {width:100%; position:relative;}
 .progressBar:before, .progressBar .progressStep:before{content:" "; position:absolute; left:50%; z-index:auto; height:15px; width:15px; background:#dcdcdc; overflow:hidden;-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%; margin:0 0 0 -7.5px}

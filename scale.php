@@ -35,18 +35,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 <?php include('inc/header.php'); ?>
 <section class="slideBlock" id="scale">
-<div class="loaderDiv">
-      <div class="loader">Loading...</div>
-    </div>
- <img src="<?php echo $siteurl; ?>images/glass.png" alt="" class="glass">
   <div class="container">
     <form name="rewardAForm" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
       <?php echo $opError; ?>
       <div class="cf">
         <div class="rewardAForm">
-        <h2>Rewards A</h2>
+          <h2>Rewards A</h2>
           <div class="scaleForm">
-            
             <div class="formRow">
               <h3>Are you encouraged to make additional purchases? </h3>
               <ul class="scaleUL">
@@ -175,9 +170,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           </div>
         </div>
         <div class="rewardBForm">
-        <h2>Rewards B</h2>
+          <h2>Rewards B</h2>
           <div class="scaleForm">
-            
             <div class="formRow">
               <h3>Are you encouraged to make additional purchases? </h3>
               <ul class="scaleUL">
