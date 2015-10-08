@@ -1,13 +1,14 @@
 <?php
-include('config.php');
+include('inc/config.php');
 $email = $_SESSION['login_user'];
 $opError = $preferred = '';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	if (isset($_POST['preferred'])){$preferred = trim($_POST['preferred']);}else {$hasError = true;}
 	if (!isset($hasError)) {
-		$sql = "INSERT INTO preferred (`email`, `preferred`) VALUES ('".$email."', '".$preferred."')";
+		//$sql = "INSERT INTO preferred (`email`, `preferred`) VALUES ('".$email."', '".$preferred."')";
+		$sql = "UPDATE survey SET preferred='".$preferred."' WHERE email='".$email."';";
 		//echo $sql;
-			if ($conn->query($sql) === TRUE) {
+			if (mysql_query($sql)) {
 				//echo "New record created successfully";
 				header('Location: congratulations.php');
 			} else {
@@ -20,21 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	}
 }
 ?>
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>Starbucks Survey</title>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<link href='https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic|Crete+Round:400,400italic' rel='stylesheet' type='text/css'>
-<link type="text/css" href="<?php echo $siteurl; ?>css/style.css" rel="stylesheet">
-<script src="<?php echo $siteurl; ?>js/modernizr.js" type="text/javascript"></script>
-<script type="text/javascript" src="<?php echo $siteurl; ?>js/jquery.min.js"></script>
-<!--[if lte IE 9]>
-  <script src="js/ie.js" type="text/javascript"></script>
-<![endif]-->
-</head>
-<body>
+<?php include('inc/header.php'); ?>
 <section class="slideBlock" id="rewardPreferred">
   <div class="loaderDiv">
     <div class="loader">Loading...</div>
@@ -80,7 +67,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="progressStep ra5"><span class="fillBG"></span></div>
   </div>
 </section>
-<script type="text/javascript" src="<?php echo $siteurl; ?>js/app.js"></script> 
-<script type="text/javascript" src="<?php echo $siteurl; ?>js/general.js"></script>
-</body>
-</html>
+<?php include('inc/footer.php'); ?>

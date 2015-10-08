@@ -86,10 +86,12 @@ $(document).ready( function(){
 		  if (cnt == prdCount) {
 			  quesBtn.removeClass('disable').addClass("enable");
 			  $(starR).addClass('active');
+			  $('.totalSpend').fadeIn()
 			  qno++;
 		  }else {
 			  quesBtn.removeClass('enable').addClass("disable");
 			  $(starR).removeClass('active');
+			  $('.totalSpend').fadeOut()
 		  }
 		  return false;
 	   }}, '.productBlock');

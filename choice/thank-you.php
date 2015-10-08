@@ -1,22 +1,15 @@
 <?php
-include('../config.php');
-
+include('../inc/config.php');
+$email = $_SESSION['login_user'];
+$sql = "UPDATE survey SET status = 1 WHERE email='".$email."';";
+if (mysql_query($sql)) {
+	//echo "New record created successfully";
+	//header('Location: thank-you.php');
+} else {
+	echo "Error: " . $sql . "<br>" . $conn->error;
+}
 ?>
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>Starbucks Survey</title>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<link href='https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic|Crete+Round:400,400italic' rel='stylesheet' type='text/css'>
-<link type="text/css" href="<?php echo $siteurl; ?>css/style.css" rel="stylesheet">
-<script src="<?php echo $siteurl; ?>js/modernizr.js" type="text/javascript"></script> 
-<script type="text/javascript" src="<?php echo $siteurl; ?>js/jquery.min.js"></script> 
-<!--[if lte IE 9]>
-  <script src="js/ie.js" type="text/javascript"></script>
-<![endif]-->
-</head>
-<body>
+<?php include('../inc/header.php'); ?>
 <section class="slideBlock" id="thankyou">
 	<div class="loaderDiv">
       <div class="loader">Loading...</div>
@@ -33,14 +26,12 @@ In this round, you were given a choice between Choice A (one star + $9.75) and C
 <p>Part 3, the final part of this experiment, will take approximately 5-7 minutes to complete. Please read the instructions carefully and click on the continue button to begin.</p>
 <a href="#" class="continueBtn">Continue</a>
   </div>
-  <div class="progressBar">
+  <?php /*?><div class="progressBar">
   	<div class="progressStep ra1 done"><span class="fillBG"></span></div>
     <div class="progressStep ra2 done"><span class="fillBG"></span></div>
     <div class="progressStep ra3 done"><span class="fillBG"></span></div>
     <div class="progressStep ra4 done"><span class="fillBG"></span></div>
     <div class="progressStep ra5 done"><span class="fillBG"></span></div>
-  </div>
+  </div><?php */?>
 </section>
-<script type="text/javascript" src="<?php echo $siteurl; ?>js/general.js"></script>
-</body>
-</html>
+<?php include('../inc/footer.php'); ?>

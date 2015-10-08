@@ -1,5 +1,5 @@
 <?php
-include('config.php');
+include('inc/config.php');
 $email = $_SESSION['login_user'];
 $opError = $asg1 =  $asg2 =  $asg3 =  $asg4 =  $asg5 = $bsg1 =  $bsg2 =  $bsg3 =  $bsg4 =  $bsg5= '';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -16,9 +16,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	
 	
 	if (!isset($hasError)) {
-		$sql = "INSERT INTO scale (`email`, `quesion_a1`, `quesion_a2`, `quesion_a3`, `quesion_a4`, `quesion_a5`, `quesion_b1`, `quesion_b2`, `quesion_b3`, `quesion_b4`, `quesion_b5`) VALUES ('".$email."', '".$asg1."', '".$asg2."', '".$asg3."', '".$asg4."', '".$asg5."', '".$bsg1."', '".$bsg2."', '".$bsg3."', '".$bsg4."', '".$bsg5."')";
+		//$sql = "INSERT INTO survey scale_quesion_a1, scale_quesion_a2, scale_quesion_a3, scale_quesion_a4, scale_quesion_a5, scale_quesion_b1, scale_quesion_b2, scale_quesion_b3, scale_quesion_b4, scale_quesion_b5) VALUES ('".$asg1."', '".$asg2."', '".$asg3."', '".$asg4."', '".$asg5."', '".$bsg1."', '".$bsg2."', '".$bsg3."', '".$bsg4."', '".$bsg5."')";
+		$sql = "UPDATE survey SET scale_quesion_a1 = '".$asg1."', scale_quesion_a2 = '".$asg2."', scale_quesion_a3 = '".$asg3."', scale_quesion_a4 = '".$asg4."', scale_quesion_a5 = '".$asg5."', scale_quesion_b1 = '".$bsg1."', scale_quesion_b2 = '".$bsg2."', scale_quesion_b3 = '".$bsg3."', scale_quesion_b4 = '".$bsg4."', scale_quesion_b5 = '".$bsg5."' WHERE email='".$email."';";
 		//echo $sql;
-			if ($conn->query($sql) === TRUE) {
+
+			if (mysql_query($sql)) {
 				//echo "New record created successfully";
 				header('Location: preferred.php');
 			} else {
@@ -31,21 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	}
 }
 ?>
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>Starbucks Survey</title>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<link href='https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic|Crete+Round:400,400italic' rel='stylesheet' type='text/css'>
-<link type="text/css" href="<?php echo $siteurl; ?>css/style.css" rel="stylesheet">
-<script src="<?php echo $siteurl; ?>js/modernizr.js" type="text/javascript"></script>
-<script type="text/javascript" src="<?php echo $siteurl; ?>js/jquery.min.js"></script>
-<!--[if lte IE 9]>
-  <script src="js/ie.js" type="text/javascript"></script>
-<![endif]-->
-</head>
-<body>
+<?php include('inc/header.php'); ?>
 <section class="slideBlock" id="scale">
 <div class="loaderDiv">
       <div class="loader">Loading...</div>
@@ -329,7 +317,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="progressStep ra5"><span class="fillBG"></span></div>
   </div>
 </section>
-<script type="text/javascript" src="<?php echo $siteurl; ?>js/app.js"></script> 
-<script type="text/javascript" src="<?php echo $siteurl; ?>js/general.js"></script>
-</body>
-</html>
+<?php include('inc/footer.php'); ?>

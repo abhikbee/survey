@@ -1,5 +1,5 @@
 <?php
-include('config.php');
+include('inc/config.php');
 $emailErr = $email = '';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$email = $_POST["email"];
@@ -8,12 +8,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	}else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 			$emailErr = '<span class="message error">Invalid email format</span>';
 	}else {
-		$result = mysql_query("SELECT COUNT(*) FROM email WHERE `email` = '$email'");
-		if (mysql_result($result, 0, 0) > 0) {
-			$emailErr = '<span class="message error">Email address already exists</span>';
+		
+		$query = "SELECT * FROM survey WHERE email='$email'";
+		$result = mysql_query($query) or die(mysql_error());
+		$count = mysql_num_rows($result);
+		
+		if ($count == 1){
+		 	$emailErr = '<span class="message error">Email address already exists</span>';
 		} else {
 			$sql = "insert into survey(email,status) values ('$email',0)";
-			if ($conn->query($sql) === TRUE) {
+			if (mysql_query($sql)) {
 				// Store Session Data
 				$_SESSION['login_user']= $email; 
 				header('Location: rewardsa');
@@ -21,29 +25,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 				echo "Error: " . $sql . "<br>" . $conn->error;
 			}
 		}
+
 	}
 }
 ?>
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>Starbucks Survey</title>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<link href='https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic|Crete+Round:400,400italic' rel='stylesheet' type='text/css'>
-<link type="text/css" href="<?php echo $siteurl; ?>css/style.css" rel="stylesheet">
-<script src="<?php echo $siteurl; ?>js/modernizr.js" type="text/javascript"></script> 
-<script type="text/javascript" src="<?php echo $siteurl; ?>js/jquery.min.js"></script> 
-<!--[if lte IE 9]>
-  <script src="js/ie.js" type="text/javascript"></script>
-<![endif]-->
-</head>
-<body>
+<?php include('inc/header.php'); ?>
 <section class="slideBlock" id="intro">
-	<div class="loaderDiv">
-      <div class="loader">Loading...</div>
-    </div>
-  <img src="<?php echo $siteurl; ?>images/glass.png" alt="" class="glass">
   <div class="container">
     <h1 class="logo"><img src="<?php echo $siteurl; ?>images/logo.jpg" alt="Starbucks" title="Starbucks"></h1>
     <p>Welcome to this 3-part online experiment! The experiment involves a series of tasks assessing two types of reward programs and will take about 15 to 20 minutes to complete. At the end of the experiment, <strong>one of your choices</strong> will be selected at random to <strong>determine your final payoff</strong>.</p>
@@ -65,6 +52,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="progressStep ra5"><span class="fillBG"></span></div>
   </div>
 </section>
-<script type="text/javascript" src="<?php echo $siteurl; ?>js/general.js"></script>
-</body>
-</html>
+<?php include('inc/footer.php'); ?>
