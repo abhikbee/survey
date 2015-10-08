@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		if (mysql_result($result, 0, 0) > 0) {
 			$emailErr = '<span class="message error">Email address already exists</span>';
 		} else {
-			$sql = "insert into email(email,status) values ('$email',0)";
+			$sql = "insert into survey(email,status) values ('$email',0)";
 			if ($conn->query($sql) === TRUE) {
 				// Store Session Data
 				$_SESSION['login_user']= $email; 

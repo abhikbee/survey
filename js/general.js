@@ -147,6 +147,15 @@ $(document).ready( function(){
 	   }}, '.rewardsAStar');
 	}
 	
+	if( $("#choicePage").length){
+
+	   $('input').on('ifChecked', function(event){
+		  $('.choiceBlock').removeClass('active');
+		  if ($(this).val() == 'Choice A') {$('.choiceA').addClass('active');}
+		  if ($(this).val() == 'Choice B') {$('.choiceB').addClass('active');}
+	   });
+	}
+	
 	$(document).on({click: function () {return false;}}, '.continueBtn.disable');
 	
 	if( $(".icheck").length){	

@@ -41,7 +41,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   </div>
   <img src="<?php echo $siteurl; ?>images/glass.png" alt="" class="glass">
   <div class="container">
+  	
     <form name="rewardPreferred" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
+    <p class="title">Please select your preferred rewards program</p>
       <?php echo $opError; ?>
       <div class="cf rewardPreferred">
         <div class="rewardAPreferred">

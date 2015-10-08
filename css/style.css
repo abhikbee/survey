@@ -18,7 +18,7 @@ ul {padding:0 0 0 15px;}
 ol { padding:0 0 0 20px}
 ul ul,ol ol { margin:10px 0}
 ul.bulletText { list-style:none; padding:0;}
-ul.bulletText li {background:url(<?php echo $siteurl; ?>images/right-arrow.gif) no-repeat left 7px;padding:2px 0 2px 15px;}
+ul.bulletText li {padding:2px 0 2px 15px;}
 p,h1,h2,h3,h4,h5,h6, ul,ol,dd,table,fieldset,address {margin: 0 0 20px;}
 .inputBox {-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; border:none; border-bottom:3px solid #fff; max-width:450px; width:100%; padding:10px 20px; line-height:30px;background:rgba(255,255,255,0.4); display:block; font-size:18px; font-weight:normal; color:#fff}
 /********** Image Formating & Alignment **********/
@@ -60,7 +60,7 @@ p,h1,h2,h3,h4,h5,h6, ul,ol,dd,table,fieldset,address {margin: 0 0 20px;}
 .productBlock { float:left; width:48%; margin:0 1% 25px; border:3px solid #dcdcdc;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px; position:relative; cursor:pointer;}
 .productBlock img { width:100%}
 .prdCenter { float:none; margin:0 auto 25px}
-.checked { background:url(<?php echo $siteurl; ?>images/cheched.png) no-repeat; width:30px; height:30px; text-indent:-1000px; overflow:hidden; text-align:left; display:block; position:absolute; right:-13px; top:-13px}
+.checked { background:url(../images/cheched.png) no-repeat; width:30px; height:30px; text-indent:-1000px; overflow:hidden; text-align:left; display:block; position:absolute; right:-13px; top:-13px}
 .price { background:#dcdcdc; display:block; position:absolute; left:50%; bottom:0; line-height:32px; width:65px; margin-left:-32px;-moz-border-radius-topleft: 5px;-webkit-border-top-left-radius: 5px; border-top-left-radius: 5px;-moz-border-radius-topright: 5px;-webkit-border-top-right-radius: 5px;border-top-right-radius: 5px; font-size:20px; font-weight:bold; color:#000000; padding-top:3px;}
 .checkPrd { border-color:#24bd53;}
 .checkPrd .price { background-color:#24bd53; color:#fff}
@@ -86,7 +86,7 @@ p,h1,h2,h3,h4,h5,h6, ul,ol,dd,table,fieldset,address {margin: 0 0 20px;}
 .scaleForm { -webkit-box-shadow:0 0 3px 0 rgba(0, 0, 0, 0.2);-moz-box-shadow:0 0 3px 0 rgba(0, 0, 0, 0.2);box-shadow:0 0 3px 0 rgba(0, 0, 0, 0.2); background-color:#fff; text-align:left; padding:10px;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px; margin-bottom:30px;}
 .rewardBForm{float:right}
 .rewardAForm h2, .rewardBForm h2 { text-align:center; font-size:28px;} 
-.scaleForm h3 { font-size:16px; line-height:normal; color:#3d3935; font-weight:normal;font-family: 'Lato', Arial, Helvetica, sans-serif; background:url(<?php echo $siteurl; ?>images/bullet.jpg) no-repeat left 8px; margin:0; padding:0 0 15px 20px}
+.scaleForm h3 { font-size:16px; line-height:normal; color:#3d3935; font-weight:normal;font-family: 'Lato', Arial, Helvetica, sans-serif; background:url(../images/bullet.jpg) no-repeat left 8px; margin:0; padding:0 0 15px 20px}
 .scaleForm .formRow { margin-bottom:20px;}
 .scaleForm label { cursor:pointer}
 .scaleUL { list-style:none; margin:0; padding:0;}
@@ -95,6 +95,7 @@ p,h1,h2,h3,h4,h5,h6, ul,ol,dd,table,fieldset,address {margin: 0 0 20px;}
 
 /**/
 .rewardPreferred { margin:0 -20px 30px}
+#rewardPreferred .title { font-size:22px; font-weight:normal;}
 .rewardAPreferred, .rewardBPreferred { float:left; padding:0 20px;}
 .rewardAPreferred .rewardsAStar, .rewardBPreferred .rewardsAStar { float:none; width:auto;}
 .rewardAPreferred {width:40%}
@@ -104,3 +105,25 @@ p,h1,h2,h3,h4,h5,h6, ul,ol,dd,table,fieldset,address {margin: 0 0 20px;}
 .rewardPreferred #rewardsa, .rewardPreferred #rewardsb { visibility:hidden}
 .rewardPreferred label {font-family: 'Crete Round', serif; font-size:28px}
 .rewardPreferred .rewardsAStar.checkPrd { border-color:#24bd53;}
+
+/*Choice Page*/
+#choicePage .desc { margin-bottom:25px;}
+#choicePage .rewardsAStar {float:none; width:auto; margin:0 0 30px; border:3px solid #fff;}
+.choiceBlock { float:left; width:46%; margin:0 2% 20px}
+.choiceBlock .starPrice, .choiceBlock .choicePrice {-webkit-box-shadow:0 0 3px 0 rgba(0, 0, 0, 0.2);-moz-box-shadow:0 0 3px 0 rgba(0, 0, 0, 0.2);box-shadow:0 0 3px 0 rgba(0, 0, 0, 0.2); background-color:#fff; text-align:left; padding:10px;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px; text-align:center; margin-bottom:30px; font-size:24px; color:#3d3935; font-weight:bold; line-height:30px;}
+.choiceBlock .starPrice { position:relative; margin-bottom:50px;}
+.choiceBlock .starPrice:after{content:"+"; position:absolute; left:50%; z-index:auto; font-size:36px; width:22px; text-align:center; font-weight:normal; overflow:hidden;-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%; margin:0 0 0 -11px; bottom:-38px;}
+.choiceBlock .choicePrice { margin-top:106px; border:3px solid #fff; padding:15px; height:282px; line-height:252px; font-size:48px;}
+.choiceBlock .choiceRadio {position:relative}
+.choiceBlock .choiceRadio label { position:absolute; left:0; top:0; width:100%; height:45px; line-height:45px; cursor:pointer; font-size:20px; font-weight:normal; color:#fff}
+.choiceBlock .choiceRadio  .unChecked + label { color:#2c3405}
+.choiceBlock .iradio { width:160px; height:45px; border:1px solid #24bd53;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
+.choiceBlock .iradio.checked { background:url(../images/radio-cheched.png) no-repeat 12px center #24bd53}
+.active .choicePrice, #choicePage .active .rewardsAStar { border-color:#24bd53}
+.choiceB .rewardsAStar ul { padding:48px 15px;}
+.choiceB .rewardsAStar li { width:4%}
+/*Thank you*/
+#thankyou { background-color:#8fa03a; color:#fff}
+#thankyou h1 { margin-bottom:50px;}
+#thankyou p { margin-bottom:20px;}
+#thankyou .resultBlock { background-color:#768624; margin:0 50px 25px; padding:15px 15px 1px;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;}

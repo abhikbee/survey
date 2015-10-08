@@ -5,11 +5,13 @@ $opError = $choice = '';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	if (isset($_POST['choice'])){$choice = trim($_POST['choice']);}else {$hasError = true;}
 	if (!isset($hasError)) {
-		$sql = "INSERT INTO choice (`email`, `choicequestion1`) VALUES ('".$email."', '".$choice."')";
+		//$sql = "INSERT INTO choice (`email`, `choicequestion1`) VALUES ('".$email."', '".$choice."')";
+		$sql = "UPDATE choice SET choicequestion8='".$choice."' WHERE email='".$email."';";
+
 		//echo $sql;
 			if ($conn->query($sql) === TRUE) {
 				//echo "New record created successfully";
-				header('Location: question2.php');
+				header('Location: question9.php');
 			} else {
 				echo "Error: " . $sql . "<br>" . $conn->error;
 			}
@@ -43,10 +45,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <form name="rewardPreferred" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
       <div class="cf">
         <div class="choiceBlock choiceA">
-          <div class="starPrice">$5</div>
+          <div class="starPrice">$8.25</div>
           <div class="rewardsAStar">
             <ul>
-             <?php $active = 1; for ($cnt = 1; $cnt <= 12; $cnt++) { ?>
+              <?php $active = 1; for ($cnt = 1; $cnt <= 12; $cnt++) { ?>
               <li class="star1 <?php if ($cnt <= $active) {echo "active";} ?>"><img src="<?php echo $siteurl; ?>images/star.png" alt="star"></li>
               <?php } ?>
             </ul>
@@ -73,7 +75,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="progressStep ra2 done"><span class="fillBG"></span></div>
     <div class="progressStep ra3 done"><span class="fillBG"></span></div>
     <div class="progressStep ra4 done"><span class="fillBG"></span></div>
-    <div class="progressStep ra5"><span class="fillBG"></span></div>
+    <div class="progressStep ra5"><span class="fillBG" style="height:35%"></span></div>
   </div>
 </section>
 <script type="text/javascript" src="<?php echo $siteurl; ?>js/app.js"></script> 
