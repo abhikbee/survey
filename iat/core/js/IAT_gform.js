@@ -105,15 +105,15 @@ function startIAT()
 	// make the target or association words green
 	if (Math.random() < 0.5)
 	{
-		openA = "<font color=green>";
-		closeA = "</font>";
+		openA = "<span class='green'>";
+		closeA = "</span>";
 		open1 = "";
 		close1 = "";
 	}
 	else
 	{		
-		open1 = "<font color=green>";
-		close1 = "</font>";
+		open1 = "<span class='green'>";
+		close1 = "</span>";
 		openA = "";
 		closeA = "";
 	}
@@ -318,7 +318,7 @@ function instructionPage()
 			}
 			else
 			{
-			    resulttext = "<div style='text-align:center;padding:20px'>Thanks for participating!</div>";
+			    resulttext = "<div class='thanksPart'>Thanks for participating!</div>";
 			    $("#picture_frame").html(resulttext);
 			}
 		}
@@ -341,7 +341,7 @@ function clearForm(toggle)
 		}
 		else
 		{
-		    resulttext = "<div style='text-align:center;padding:20px'>Thanks for participating!</div>";
+		    resulttext = "<div class='thanksPart'>Thanks for participating!</div>";
 		    $("#picture_frame").html(resulttext);
 		}
 	}
