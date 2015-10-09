@@ -19,7 +19,7 @@ if (mysql_query($sql)) {
     </div>
     <p>Thank you for completing Part 1 and Part 2 of the online experiment! One of your choices from Parts 1 to 3 are going to be randomly selected to determine your final payoff.</p>
     <p>Part 3, the final part of this experiment, will take approximately 5-7 minutes to complete. Please read the instructions carefully and click on the continue button to begin.</p>
-    <a href="#" class="continueBtn">Continue</a> </div>
+    <a href="<?php echo $siteurl; ?>iat/" class="continueBtn">Continue</a> </div>
   <?php /*?><div class="progressBar">
   	<div class="progressStep ra1 done"><span class="fillBG"></span></div>
     <div class="progressStep ra2 done"><span class="fillBG"></span></div>
