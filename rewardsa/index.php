@@ -1,6 +1,6 @@
 <?php 
 include('../inc/config.php');
-$opError = $check1 = $check2 = $check3 = $check4 = $setBuy = $setContinue = $setSpend = '';
+$opError = $check1 = $check2 = $check3 = $check4 = $setBuy = $setContinue = $setSpend = $setBtn = '';
 $btnContinue= '<a href="rewards2.php" class="continueBtn">Continue</a>';
 $btnBuy = '<input type="submit" class="buyNow" name="buynow" value="Buy Now">';
 $active = 0;
@@ -9,16 +9,17 @@ $active = 0;
 		if (isset($_POST['check2'])){$check2 = trim($_POST['check2']);if ($check2 =='wrong') $hasError = true;}
 		if (isset($_POST['check3'])){$check3 = trim($_POST['check3']);if ($check3 =='wrong') $hasError = true;}
 		if (isset($_POST['check4'])){$check4 = trim($_POST['check4']);if ($check4 =='wrong') $hasError = true;}
+		if ($check1 =='') {$hasError = true;}
 		if (!isset($hasError)) {
-			$setContinue = $btnContinue;
+			$setBtn = $btnContinue;
 			$active = 1;
-			$setSpend = '$2.85';
+			$setSpend = 2.85;
 		} else {
 			$opError = '<div class="message error">Incorrect select</div>';
-			$setBuy = $btnBuy;
+			$setBtn = $btnBuy;
 		}
 	} else {
-		$setBuy = $btnBuy;
+		$setBtn = $btnBuy;
 	}
 ?>
 <?php include('../inc/header.php'); ?>
@@ -37,32 +38,36 @@ $active = 0;
           </div>
           <div class="rewardsProducts">
             <div class="productBlock <?php if (!empty($check1)) { echo 'activeDiv';}?>"> <img src="<?php echo $siteurl; ?>images/prd4.jpg">
+            <span class="prdName"><span>Tall Latte</span></span>
               <input class="icheck" type="checkbox" name="check1" value="right" id="check1" <?php if (!empty($check1)) { echo 'checked';}?>>
               <label class="layer" for="check1"></label>
             </div>
-            <div class="productBlock  <?php if (!empty($check2)) { echo 'activeDiv';}?>"> <img src="<?php echo $siteurl; ?>images/prd4.jpg">
+            <div class="productBlock  <?php if (!empty($check2)) { echo 'activeDiv';}?>"> <img src="<?php echo $siteurl; ?>images/temp.jpg">
+            <span class="prdName"><span>Lorem Ipsum</span></span>
               <input class="icheck" type="checkbox" name="check2" value="wrong" id="check2" <?php if (!empty($check2)) { echo 'checked';}?>>
               <label class="layer" for="check2"></label>
             </div>
-            <div class="productBlock  <?php if (!empty($check3)) { echo 'activeDiv';}?>"> <img src="<?php echo $siteurl; ?>images/prd4.jpg">
+            <div class="productBlock  <?php if (!empty($check3)) { echo 'activeDiv';}?>"> <img src="<?php echo $siteurl; ?>images/temp.jpg">
+            <span class="prdName"><span>Lorem Ipsum</span></span>
               <input class="icheck" type="checkbox" name="check3" value="wrong" id="check3" <?php if (!empty($check3)) { echo 'checked';}?>>
               <label class="layer" for="check3"></label>
             </div>
-            <div class="productBlock  <?php if (!empty($check4)) { echo 'activeDiv';}?>"> <img src="<?php echo $siteurl; ?>images/prd4.jpg">
+            <div class="productBlock  <?php if (!empty($check4)) { echo 'activeDiv';}?>"> <img src="<?php echo $siteurl; ?>images/temp.jpg">
+            <span class="prdName"><span>Lorem Ipsum</span></span>
               <input class="icheck" type="checkbox" name="check4" value="wrong" id="check4" <?php if (!empty($check4)) { echo 'checked';}?>>
               <label class="layer" for="check4"></label>
             </div>
             <?php if (!empty($setSpend)) { ?>
-            <div class="totalSpend">Spend = <?php echo $setSpend; ?></div>
+            <div class="totalSpend">Spend = $<?php echo $setSpend; ?></div>
             <?php } ?>
           </div>
         </div>
-        <?php echo $opError; ?><?php echo $setBuy; ?><?php echo $setContinue; ?>
+        <?php echo $opError; ?><?php echo $setBtn; ?>
       </form>
     </div>
   </div>
   <div class="progressBar">
-    <div class="progressStep ra1"><span class="fillBG" style="height:8.33%"></span></div>
+    <div class="progressStep ra1"><span class="fillBG" style="height:0%"></span></div>
     <div class="progressStep ra2"><span class="fillBG"></span></div>
     <div class="progressStep ra3"><span class="fillBG"></span></div>
     <div class="progressStep ra4"><span class="fillBG"></span></div>

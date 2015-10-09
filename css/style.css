@@ -59,17 +59,29 @@ p,h1,h2,h3,h4,h5,h6, ul,ol,dd,table,fieldset,address {margin: 0 0 20px;}
 .rewardsAStar li { float:left; width:25%; padding:5px 0}
 .rewardsAStar img { background-color:#e4e4e4}
 .rewardsAStar .active img { background-color:#dbbb7e}
+
+.rewardsBStar {-webkit-box-shadow:0 0 3px 0 rgba(0, 0, 0, 0.2);-moz-box-shadow:0 0 3px 0 rgba(0, 0, 0, 0.2);box-shadow:0 0 3px 0 rgba(0, 0, 0, 0.2); float:left; width:50%; background-color:#fff; margin-bottom:50px}
+.rewardsBStar ul { list-style:none; margin:0; padding:48px 15px}
+.rewardsBStar li { float:left; width:4%; padding:5px 0}
+.rewardsBStar img { background-color:#e4e4e4}
+.rewardsBStar .active img { background-color:#dbbb7e}
+
+
 .rewardsProducts { float:right; width:48%; margin-bottom:30px;}
 .productBlock { float:left; width:48%; margin:0 1% 25px; border:3px solid #dcdcdc;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px; position:relative; cursor:pointer;}
 .productBlock img { width:100%}
 .prdCenter { float:none; margin:0 auto 25px}
 .checked { background:url(../images/cheched.png) no-repeat; width:30px; height:30px; text-indent:-1000px; overflow:hidden; text-align:left; display:block; position:absolute; right:-13px; top:-13px}
 .price { background:#dcdcdc; display:block; position:absolute; left:50%; bottom:0; line-height:32px; width:65px; margin-left:-32px;-moz-border-radius-topleft: 5px;-webkit-border-top-left-radius: 5px; border-top-left-radius: 5px;-moz-border-radius-topright: 5px;-webkit-border-top-right-radius: 5px;border-top-right-radius: 5px; font-size:20px; font-weight:bold; color:#000000; padding-top:3px;}
+
+.prdName {display:block; position:absolute; left:0; bottom:0;  width:100%; font-size:16px; font-weight:normal; color:#000000; }
+.prdName span {display:inline-block; background:#dcdcdc;line-height:normal;padding:5px 10px 2px;-moz-border-radius-topleft: 5px;-webkit-border-top-left-radius: 5px; border-top-left-radius: 5px;-moz-border-radius-topright: 5px;-webkit-border-top-right-radius: 5px;border-top-right-radius: 5px;}
 .checkPrd { border-color:#24bd53;}
 .checkPrd .price { background-color:#24bd53; color:#fff}
+.activeDiv .prdName span{ background-color:#24bd53; color:#fff}
 .totalSpend{clear:both; font-size:24px; color:#000; text-align:center; font-family: 'Crete Round', serif; display:none;}
-#questionADone .rewardsProducts, #questionBDone .rewardsProducts { float:none; width:auto;}
-#questionADone .productBlock, #questionBDone .productBlock {width:23%; margin:0 1% 25px}
+#questionDone .rewardsProducts{ float:none; width:auto;}
+#questionDone .productBlock{width:23%; margin:0 1% 25px}
 /*Reward B*/
 #rewardsB .rewardsAStar li, .rewardBPreferred .rewardsAStar li{ width:4%}
 
@@ -137,3 +149,4 @@ p,h1,h2,h3,h4,h5,h6, ul,ol,dd,table,fieldset,address {margin: 0 0 20px;}
 #buyNowSection .productBlock .icheckbox.checked { background:url(../images/cheched.png) no-repeat;}
 #buyNowSection .productBlock.activeDiv { border-color:#24bd53;}
 #buyNowSection .totalSpend { display:block}
+#buyNowSection input.icheck{ position:absolute; left:0; top:0; width:1px; height:1px; overflow:hidden; z-index:-11;}

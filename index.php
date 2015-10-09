@@ -1,6 +1,7 @@
 <?php
 include('inc/config.php');
 $emailErr = $email = '';
+if(!empty($_GET["email"])) $email = $_GET["email"];
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$email = $_POST["email"];
 	if (empty($email)) {
@@ -39,7 +40,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="emailForm">
       <form name="emailverify" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
         <?php echo $emailErr; ?>
+        <?php  if(!empty($email)) { ?>
+        <input type="hidden" name="email" id="email" value="<?php echo $email; ?>">
+        <?php } else { ?>
         <input type="email" name="email" id="email" value="<?php echo $email; ?>" class="inputBox" placeholder="Enter your email address">
+        <?php } ?>
         <input type="submit" value="Continue" name="continue" class="continueBtn introBtn" disabled>
       </form>
     </div>

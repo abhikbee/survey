@@ -9,133 +9,24 @@ var totalSpend = price = cnt = prgBG = questionNo = 0
 $(document).ready( function(){
 	winHeight();
 	$('.loaderDiv .loader').animate({ width: '100%' }, 1000);
-	if( $("#rewardsA").length){
-		//quesionno,cnt,prdCount,sectionName
-		if( $("#question1").length){qno = 1; prdCount = 1; sectionName = 'ra1'; prgBG = 8.33+'%';}
-		if( $("#question2").length){qno = 2; prdCount = 3; sectionName = 'ra1'; prgBG = 16.66+'%';}
-		if( $("#question3").length){qno = 3; prdCount = 2; sectionName = 'ra1'; prgBG = 24.99+'%';}
-		if( $("#question4").length){qno = 4; prdCount = 1; sectionName = 'ra1'; prgBG = 33.33+'%';}
-		if( $("#question5").length){qno = 5; prdCount = 1; sectionName = 'ra1'; prgBG = 41.65+'%';}
-		if( $("#question6").length){qno = 6; prdCount = 2; sectionName = 'ra1'; prgBG = 49.48+'%';}
-		if( $("#question7").length){qno = 7; prdCount = 2; sectionName = 'ra1'; prgBG = 58.31+'%';}
-		if( $("#question8").length){qno = 8; prdCount = 2; sectionName = 'ra1'; prgBG = 66.64+'%';}
-		if( $("#question9").length){qno = 9; prdCount = 1; sectionName = 'ra1'; prgBG = 74.97+'%';}
-		if( $("#question10").length){qno = 10; prdCount = 1; sectionName = 'ra1'; prgBG = 83.3+'%';}
-		if( $("#question11").length){qno = 11; prdCount = 2; sectionName = 'ra1'; prgBG = 91.63+'%';}
-		if( $("#question12").length){qno = 12; prdCount = 2; sectionName = 'ra1'; prgBG = 100+'%';}
-		qRequest = '#question'+qno+' .continueBtn';
-		starR = '#question'+qno+' .star'+qno;
-		quesBtn = $(qRequest);
-		sName = '.' + sectionName + ' .fillBG';
-		$(sName).css({'height':prgBG});
-		
+	if( $("#questionDone").length){
 		$(document).on({click: function () {
-		  ids = '#question' + qno + ' .totalSpend';
 		  if ($(this).hasClass('checkPrd')) {
 			   $(this).removeClass('checkPrd');
 			   $(this).find('.checked').remove();
-			   cnt--;
+			   $('.continueBtn').removeClass('enable').addClass("disable");
 		  } else {
+		 	   $('.productBlock .checked').remove();
+			   $('.productBlock').removeClass('checkPrd');
 			   $(this).addClass('checkPrd');
 			   $(this).append('<span class="checked">Checked</span>');
-			   cnt++;
-		  }
-		  if (cnt == prdCount) {
-			  quesBtn.removeClass('disable').addClass("enable");
-			  $(starR).addClass('active');
-			  $('.totalSpend').fadeIn()
-			  qno++;
-		  }else {
-			  quesBtn.removeClass('enable').addClass("disable");
-			  $(starR).removeClass('active');
-			  $('.totalSpend').fadeOut()
-		  }
-		  return false;
-	   }}, '.productBlock');
-	   
-	}
-	if( $("#rewardsB").length){
-		//quesionno,cnt,prdCount,sectionName
-		if( $("#question1").length){qno = 1; prdCount = 1; sectionName = 'ra2'; prgBG = 8.33+'%';}
-		if( $("#question2").length){qno = 2; prdCount = 3; sectionName = 'ra2'; prgBG = 16.66+'%';}
-		if( $("#question3").length){qno = 3; prdCount = 2; sectionName = 'ra2'; prgBG = 24.99+'%';}
-		if( $("#question4").length){qno = 4; prdCount = 1; sectionName = 'ra2'; prgBG = 33.33+'%';}
-		if( $("#question5").length){qno = 5; prdCount = 1; sectionName = 'ra2'; prgBG = 41.65+'%';}
-		if( $("#question6").length){qno = 6; prdCount = 2; sectionName = 'ra2'; prgBG = 49.48+'%';}
-		if( $("#question7").length){qno = 7; prdCount = 2; sectionName = 'ra2'; prgBG = 58.31+'%';}
-		if( $("#question8").length){qno = 8; prdCount = 2; sectionName = 'ra2'; prgBG = 66.64+'%';}
-		if( $("#question9").length){qno = 9; prdCount = 1; sectionName = 'ra2'; prgBG = 74.97+'%';}
-		if( $("#question10").length){qno = 10; prdCount = 1; sectionName = 'ra2'; prgBG = 83.3+'%';}
-		if( $("#question11").length){qno = 11; prdCount = 2; sectionName = 'ra2'; prgBG = 91.63+'%';}
-		if( $("#question12").length){qno = 12; prdCount = 2; sectionName = 'ra2'; prgBG = 100+'%';}
-		qRequest = '#question'+qno+' .continueBtn';
-		starR = '#question'+qno+' .star'+qno;
-		quesBtn = $(qRequest);
-		sName = '.' + sectionName + ' .fillBG';
-		$(sName).css({'height':prgBG});
-		$(document).on({click: function () {
-		  ids = '#question' + qno + ' .totalSpend';
-		  if ($(this).hasClass('checkPrd')) {
-			   $(this).removeClass('checkPrd');
-			   $(this).find('.checked').remove();
-			   cnt--;
-		  } else {
-			   $(this).addClass('checkPrd');
-			   $(this).append('<span class="checked">Checked</span>');
-			   cnt++;
-		  }
-		  if (cnt == prdCount) {
-			  quesBtn.removeClass('disable').addClass("enable");
-			  $(starR).addClass('active');
-			  $('.totalSpend').fadeIn()
-			  qno++;
-		  }else {
-			  quesBtn.removeClass('enable').addClass("disable");
-			  $(starR).removeClass('active');
-			  $('.totalSpend').fadeOut()
-		  }
-		  return false;
-	   }}, '.productBlock');
-	   
-	}
-	if( $("#questionADone").length){
-		$(document).on({click: function () {
-		
-		  if ($(this).hasClass('checkPrd')) {
-			   $(this).removeClass('checkPrd');
-			   $(this).find('.checked').remove();
-			   $('#questionADone .continueBtn').removeClass('enable').addClass("disable");
-		  } else {
-		 	   $('#questionADone .productBlock .checked').remove();
-			   $('#questionADone .productBlock').removeClass('checkPrd');
-			   $(this).addClass('checkPrd');
-			   $(this).append('<span class="checked">Checked</span>');
-			   
-			   $('#questionADone .continueBtn').removeClass('disable').addClass("enable");
-			   
+			   $('.continueBtn').removeClass('disable').addClass("enable");
 		  }
 		  return false;
 	   }}, '.productBlock');
 	}
-	if( $("#questionBDone").length){
-		$(document).on({click: function () {
-		
-		  if ($(this).hasClass('checkPrd')) {
-			   $(this).removeClass('checkPrd');
-			   $(this).find('.checked').remove();
-			   $('#questionBDone .continueBtn').removeClass('enable').addClass("disable");
-		  } else {
-		 	   $('#questionBDone .productBlock .checked').remove();
-			   $('#questionBDone .productBlock').removeClass('checkPrd');
-			   $(this).addClass('checkPrd');
-			   $(this).append('<span class="checked">Checked</span>');
-			   
-			   $('#questionBDone .continueBtn').removeClass('disable').addClass("enable");
-			   
-		  }
-		  return false;
-	   }}, '.productBlock');
-	}
+	
+	
 	
 	if( $("#rewardPreferred").length){
 		$(document).on({click: function () {
@@ -151,7 +42,6 @@ $(document).ready( function(){
 	}
 	
 	if( $("#choicePage").length){
-
 	   $('input').on('ifChecked', function(event){
 		  $('.choiceBlock').removeClass('active');
 		  if ($(this).val() == 'Choice A') {$('.choiceA').addClass('active');}
@@ -161,26 +51,30 @@ $(document).ready( function(){
 	
 	$(document).on({click: function () {return false;}}, '.continueBtn.disable');
 	
+	
+	if( $("#buyNowSection .continueBtn").length){
+		$('input.icheck').on('ifClicked', function(event){
+		 $('input.icheck').iCheck('disable');
+	   });
+	}
+	if( $("#buyNowSection .continueBtn").length){}else {
 	if( $(".icheck").length){	
 		$('input.icheck').iCheck({
 			checkboxClass: 'icheckbox',
 			radioClass: 'iradio',
 			uncheckedClass: 'unChecked',
 		});
-	}
+	}}
 	if( $("#buyNowSection").length){
-		$('input').on('ifChecked', function(event){
-		  $(this).parents().addClass('activeDiv');
+		if( $("#buyNowSection .continueBtn").length){}else {
+		$('input.icheck').on('ifChecked', function(event){
+		  $(this).parent().parent().addClass('activeDiv');
 	   });
-	   $('input').on('ifUnchecked', function(event){
-		  $(this).parents().removeClass('activeDiv');
-	   });
-	   
+	   $('input.icheck').on('ifUnchecked', function(event){
+		  $(this).parent().parent().removeClass('activeDiv');
+	   });  
 	}
-
-	
-	
-	
+	}
 });
 /*================= On Document Load and Resize Start =================*/
 $(window).resize(function() {
