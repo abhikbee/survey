@@ -68,8 +68,8 @@ $active = 110;
     </div>
   </div>
   <div class="progressBar">
-    <div class="progressStep ra1"><span class="fillBG" style="height:91.63%"></span></div>
-    <div class="progressStep ra2"><span class="fillBG"></span></div>
+  	<div class="progressStep ra1 done"><span class="fillBG"></span></div>
+    <div class="progressStep ra2"><span class="fillBG" style="height:91.63%"></span></div>
     <div class="progressStep ra3"><span class="fillBG"></span></div>
     <div class="progressStep ra4"><span class="fillBG"></span></div>
     <div class="progressStep ra5"><span class="fillBG"></span></div>
