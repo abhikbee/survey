@@ -34,12 +34,14 @@ p,h1,h2,h3,h4,h5,h6, ul,ol,dd,table,fieldset,address {margin: 0 0 20px;}
 .slideBlock p { margin-bottom:20px}
 #intro { background-color:#595a5c; color:#fff;}
 #intro p { margin-bottom:20px}
-.emailForm { text-align:center;}
+.emailForm { text-align:center; }
+.thanksForm {width:450px; margin:50px auto}
 .emailForm .checkBox {margin-bottom:20px;}
 .emailForm .checkBox label { font-size:17px}
 .emailForm .checkBox .icheckbox { display:inline-block; margin:0;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;}
 .emailForm .checkBox .icheckbox.checked { background-image:url(../images/agree.png); background-position:center center; background-repeat:no-repeat}
-.emailForm .message {margin:0 20px 10px;}
+.emailForm .message { margin-bottom:0 0 20px}
+.emailForm .inputBox { display:inline-block; max-width:100%; margin-bottom:20px;}
 .continueBtn { width:170px; height:50px; line-height:50px; border:none; background:#e3c383;font-family: 'Crete Round', serif; font-size:24px; color:#0f0f0f; font-weight:normal;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; text-decoration:none; display:inline-block; margin:0 auto; cursor:pointer; margin:0 5px;}
 .continueBtn:disabled, .continueBtn.disable {background: #dddddd; opacity:0.5}
 
@@ -130,21 +132,24 @@ p,h1,h2,h3,h4,h5,h6, ul,ol,dd,table,fieldset,address {margin: 0 0 20px;}
 .rewardPreferred .rewardsAStar.checkPrd { border-color:#24bd53;}
 
 /*Choice Page*/
-#choicePage .desc { margin-bottom:25px;}
+#choicePage .desc { margin-bottom:40px;}
 #choicePage .rewardsAStar {float:none; width:auto; margin:0 0 30px; border:3px solid #fff;}
 .choiceBlock { float:left; width:46%; margin:0 2% 20px}
-.choiceBlock .starPrice, .choiceBlock .choicePrice {-webkit-box-shadow:0 0 3px 0 rgba(0, 0, 0, 0.2);-moz-box-shadow:0 0 3px 0 rgba(0, 0, 0, 0.2);box-shadow:0 0 3px 0 rgba(0, 0, 0, 0.2); background-color:#fff; text-align:left; padding:10px;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px; text-align:center; margin-bottom:30px; font-size:24px; color:#3d3935; font-weight:bold; line-height:30px;}
+.choiceBlock .starPrice, .choiceBlock .choicePrice {-webkit-box-shadow:0 0 3px 0 rgba(0, 0, 0, 0.2);-moz-box-shadow:0 0 3px 0 rgba(0, 0, 0, 0.2);box-shadow:0 0 3px 0 rgba(0, 0, 0, 0.2); background-color:#fff; text-align:left; padding:10px;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px; text-align:center; margin-bottom:30px; font-size:24px; color:#3d3935; font-weight:bold; line-height:30px; border:3px solid #fff;}
 .choiceBlock .starPrice { position:relative; margin-bottom:50px;}
 .choiceBlock .starPrice:after{content:"+"; position:absolute; left:50%; z-index:auto; font-size:36px; width:22px; text-align:center; font-weight:normal; overflow:hidden;-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%; margin:0 0 0 -11px; bottom:-38px;}
-.choiceBlock .choicePrice { margin-top:106px; border:3px solid #fff; padding:15px; height:282px; line-height:252px; font-size:48px;}
+.choiceBlock .choicePrice {border:3px solid #fff; padding:15px; height:113px; line-height:113px; font-size:48px;}
 .choiceBlock .choiceRadio {position:relative}
 .choiceBlock .choiceRadio label { position:absolute; left:0; top:0; width:100%; height:45px; line-height:45px; cursor:pointer; font-size:20px; font-weight:normal; color:#fff}
 .choiceBlock .choiceRadio  .unChecked + label { color:#2c3405}
 .choiceBlock .iradio { width:160px; height:45px; border:1px solid #24bd53;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
 .choiceBlock .iradio.checked { background:url(../images/radio-cheched.png) no-repeat 12px center #24bd53}
-.active .choicePrice, #choicePage .active .rewardsAStar { border-color:#24bd53}
-.choiceB .rewardsAStar ul { padding:48px 15px;}
+.active .choicePrice, #choicePage .active .rewardsAStar, .choiceBlock.active .starPrice { border-color:#24bd53}
+.choiceB .rewardsAStar ul {}
 .choiceB .rewardsAStar li { width:4%}
+#choicePage .choiceStar, #choicePage .choiceStar125 { float:none; width:50%; margin:0 auto 40px}
+#choicePage .choiceBlock .rewardsAStar li { float:none; width:auto;}
+#choicePage .choiceStar125 li { width:4%}
 /*Thank you*/
 #thankyou { background-color:#8fa03a; color:#fff}
 #thankyou h1 { margin-bottom:50px;}
@@ -152,9 +157,9 @@ p,h1,h2,h3,h4,h5,h6, ul,ol,dd,table,fieldset,address {margin: 0 0 20px;}
 #thankyou .resultBlock { background-color:#768624; margin:0 50px 25px; padding:15px 15px 1px;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;}
 
 /**/
-#buyNowSection .productBlock .icheckbox, #questionDone .productBlock .icheckbox { width:30px; height:30px; text-indent:-1000px; overflow:hidden; text-align:left; display:block; position:absolute !important; right:-12px; top:-12px; border:none}
+#buyNowSection .productBlock .icheckbox, #questionDone .productBlock .iradio { width:30px; height:30px; text-indent:-1000px; overflow:hidden; text-align:left; display:block; position:absolute !important; right:-12px; top:-12px; border:none}
 #buyNowSection .productBlock .layer, #questionDone .productBlock .layer { position:absolute; left:0; top:0; width:100%; height:100%; cursor:pointer} 
-#buyNowSection .productBlock .icheckbox.checked, #questionDone .productBlock .icheckbox.checked,{ background:url(../images/cheched.png) no-repeat;}
+#buyNowSection .productBlock .icheckbox.checked, #questionDone .productBlock .iradio.checked,{ background:url(../images/cheched.png) no-repeat;}
 #buyNowSection .productBlock.activeDiv, #questionDone .productBlock.activeDiv { border-color:#24bd53;}
 #buyNowSection .totalSpend { display:block}
 #buyNowSection input.icheck, #questionDone input.icheck{ position:absolute; left:0; top:0; width:1px; height:1px; overflow:hidden; z-index:-11;}

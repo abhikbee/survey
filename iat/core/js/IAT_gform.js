@@ -321,7 +321,9 @@ function instructionPage()
 			    resulttext = "<div class='thanksPart'>Thanks for participating!</div>";
 			    $("#picture_frame").html(resulttext);
 			}
+			window.location.href = "http://localhost/survey/trunk/thank-you.php";
 		}
+		
 	}
 	else
 	{
@@ -344,6 +346,7 @@ function clearForm(toggle)
 		    resulttext = "<div class='thanksPart'>Thanks for participating!</div>";
 		    $("#picture_frame").html(resulttext);
 		}
+		window.location.href = "http://localhost/survey/trunk/thank-you.php";
 	}
 }
 

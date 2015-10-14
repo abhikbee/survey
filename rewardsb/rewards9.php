@@ -13,7 +13,7 @@ $active = 86;
 		if (!isset($hasError)) {
 			$setContinue = $btnContinue;
 			$active = 95;
-			$setSpend = 47.65;
+			$setSpend = 4.25;
 		} else {
 			$opError = '<div class="message error">Incorrect selection</div>';
 			$setBuy = $btnBuy;

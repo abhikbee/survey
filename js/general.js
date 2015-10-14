@@ -9,7 +9,7 @@ var totalSpend = price = cnt = prgBG = questionNo = 0
 $(document).ready( function(){
 	winHeight();
 	$('.loaderDiv .loader').animate({ width: '100%' }, 1000);
-	if( $("#questionDone").length){
+	/*if( $("#questionDone").length){
 		$(document).on({click: function () {
 		  if ($(this).hasClass('checkPrd')) {
 			   $(this).removeClass('checkPrd');
@@ -24,7 +24,7 @@ $(document).ready( function(){
 		  }
 		  return false;
 	   }}, '.productBlock');
-	}
+	}*/
 	
 	
 	
@@ -65,13 +65,21 @@ $(document).ready( function(){
 	}
 	if( $("#buyNowSection").length){
 		if( $("#buyNowSection .continueBtn").length){}else {
+			$('input.icheck').on('ifChecked', function(event){
+			  $(this).parent().parent().addClass('activeDiv');
+		   });
+		   $('input.icheck').on('ifUnchecked', function(event){
+			  $(this).parent().parent().removeClass('activeDiv');
+		   });  
+		}
+	}
+	if( $("#questionDone").length){
 		$('input.icheck').on('ifChecked', function(event){
-		  $(this).parent().parent().addClass('activeDiv');
+			  $(this).parent().parent().addClass('activeDiv');
 	   });
 	   $('input.icheck').on('ifUnchecked', function(event){
 		  $(this).parent().parent().removeClass('activeDiv');
-	   });  
-	}
+	   }); 
 	}
 });
 /*================= On Document Load and Resize Start =================*/
