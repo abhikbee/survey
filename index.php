@@ -1,31 +1,22 @@
 <?php
 include('inc/config.php');
-$emailErr = $email = '';
-if(!empty($_GET["email"])) $email = $_GET["email"];
+$emailErr = $agree = '';
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-	$email = $_POST["email"];
-	if (empty($email)) {
-		$emailErr = '<span class="message error">Please enter your email</span>';
-	}else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-			$emailErr = '<span class="message error">Invalid email format</span>';
+	if(!empty($_POST["agree"])) $agree = $_POST["agree"];
+	if ($agree != 'Yes') {
+		$emailErr = '<span class="message error">Please agree to our policy!</span>';
 	}else {
-		
-		$query = "SELECT * FROM survey WHERE email='$email'";
-		$result = mysql_query($query) or die(mysql_error());
-		$count = mysql_num_rows($result);
-		
-		if ($count == 1){
-		 	$emailErr = '<span class="message error">Email address already exists</span>';
+		$uID = uniqid();
+		$sql = "insert into survey(identifier,status) values ('$uID',0)";
+		if (mysql_query($sql)) {
+			// Store Session Data
+			$_SESSION['login_user']= $uID; 
+			header('Location: intro.php');
 		} else {
-			$sql = "insert into survey(email,status) values ('$email',0)";
-			if (mysql_query($sql)) {
-				// Store Session Data
-				$_SESSION['login_user']= $email; 
-				header('Location: rewardsa');
-			} else {
-				echo "Error: " . $sql . "<br>" . $conn->error;
-			}
+			echo "Error: " . $sql . "<br>" . $conn->error;
 		}
+
 
 	}
 }
@@ -34,27 +25,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <section class="slideBlock" id="intro">
   <div class="container">
     <h1 class="logo"><img src="<?php echo $siteurl; ?>images/logo.jpg" alt="Starbucks" title="Starbucks"></h1>
-    <p>Welcome to this 3-part online experiment! The experiment involves a series of tasks assessing two types of reward programs and will take about 15 to 20 minutes to complete. At the end of the experiment, <strong>one of your choices</strong> will be selected at random to <strong>determine your final payoff</strong>.</p>
-    <p>In Part 1, you will be guided through a virtual Starbucks store to make a series of notional purchase decisions; collecting points under Rewards A and Rewards B. Please <strong>pay close attention</strong> to the points received under the two programs. Once you collect sufficient points for a free item under Rewards A, you can select a free item of your choice. Then you will make the same purchases under Rewards B until you collect points to redeem a free item. In the end of Part 1, we will ask you to indicate your preferred rewards program across five parameters.</p>
-    <p>After <strong>15 seconds</strong>, the <strong>continue</strong> button will become active and you can click this to go to the next screen. Part 1 of the experiment will take about 5-7 minutes to complete. We request that you give your undivided attention while making decisions as it may influence the reward you receive.</p>
+    <p>Welcome to the online Starbucks Rewards program research! Thank you for taking part in this research. We really appreciate it! The study involves a series of tests assessing two types of reward programs and will take you 15 to 20 minutes to complete. Upon successful completion of the three parts, please remember to enter your first and last name, as well as email to receive your $5 e-gift card.</p>
     <div class="emailForm">
       <form name="emailverify" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
         <?php echo $emailErr; ?>
-        <?php  if(!empty($email)) { ?>
-        <input type="hidden" name="email" id="email" value="<?php echo $email; ?>">
-        <?php } else { ?>
-        <input type="email" name="email" id="email" value="<?php echo $email; ?>" class="inputBox" placeholder="Enter your email address">
-        <?php } ?>
+        <div class="checkBox cf">
+        <input class="icheck" type="checkbox" name="agree" value="Yes" id="agree" checked>
+        <label for="agree">I understand the statements above, and freely consent to participate in the study, rewards subject to the discretion of the researchers. </label>
+        </div>
         <input type="submit" value="Continue" name="continue" class="continueBtn introBtn" disabled>
       </form>
     </div>
-  </div>
-  <div class="progressBar">
-    <div class="progressStep ra1"><span class="fillBG"></span></div>
-    <div class="progressStep ra2"><span class="fillBG"></span></div>
-    <div class="progressStep ra3"><span class="fillBG"></span></div>
-    <div class="progressStep ra4"><span class="fillBG"></span></div>
-    <div class="progressStep ra5"><span class="fillBG"></span></div>
   </div>
 </section>
 <?php include('inc/footer.php'); ?>

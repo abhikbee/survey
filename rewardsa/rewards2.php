@@ -1,6 +1,6 @@
 <?php 
 include('../inc/config.php');
-$opError = $check1 = $check2 = $check3 = $check4 = $setBuy = $setContinue = $setSpend = $setBtn = '';
+$opError = $check1 = $check2 = $check3 = $check4 = $setBuy = $setContinue = $setSpend = $setContinue = $setBuy = '';
 $btnContinue= '<a href="rewards3.php" class="continueBtn">Continue</a>';
 $btnBuy = '<input type="submit" class="buyNow" name="buynow" value="Buy Now">';
 $active = 1;
@@ -13,15 +13,15 @@ $active = 1;
 		if ($check2 =='') {$hasError = true;}
 		if ($check3 =='') {$hasError = true;}
 		if (!isset($hasError)) {
-			$setBtn = $btnContinue;
+			$setContinue = $btnContinue;
 			$active = 2;
-			$setSpend = 13.30;
+			$setSpend = 10.45;
 		} else {
 			$opError = '<div class="message error">Incorrect select</div>';
-			$setBtn = $btnBuy;
+			$setBuy = $btnBuy;
 		}
 	} else {
-		$setBtn = $btnBuy;
+		$setBuy = $btnBuy;
 	}
 ?>
 <?php include('../inc/header.php'); ?>
@@ -59,21 +59,19 @@ $active = 1;
               <input class="icheck" type="checkbox" name="check4" value="wrong" id="check4" <?php if (!empty($check4)) { echo 'checked';}?>>
               <label class="layer" for="check4"></label>
             </div>
+            <?php echo $setBuy; ?>	
             <?php if (!empty($setSpend)) { ?>
             <div class="totalSpend">Spend = $<?php echo $setSpend; ?></div>
             <?php } ?>
           </div>
         </div>
-        <?php echo $opError; ?><?php echo $setBtn; ?>	
+        <?php echo $opError; ?><?php echo $setContinue; ?>
       </form>
     </div>
   </div>
   <div class="progressBar">
     <div class="progressStep ra1"><span class="fillBG" style="height:8.33%"></span></div>
-    <div class="progressStep ra2"><span class="fillBG"></span></div>
-    <div class="progressStep ra3"><span class="fillBG"></span></div>
-    <div class="progressStep ra4"><span class="fillBG"></span></div>
-    <div class="progressStep ra5"><span class="fillBG"></span></div>
+    
   </div>
 </section>
 <?php include('../inc/footer.php'); ?>

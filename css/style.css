@@ -35,13 +35,17 @@ p,h1,h2,h3,h4,h5,h6, ul,ol,dd,table,fieldset,address {margin: 0 0 20px;}
 #intro { background-color:#595a5c; color:#fff;}
 #intro p { margin-bottom:20px}
 .emailForm { text-align:center;}
-.emailForm .inputBox { margin:0 auto 30px;}
-.emailForm .message { max-width:450px; margin:0 auto 10px;}
+.emailForm .checkBox {margin-bottom:20px;}
+.emailForm .checkBox label { font-size:17px}
+.emailForm .checkBox .icheckbox { display:inline-block; margin:0;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;}
+.emailForm .checkBox .icheckbox.checked { background-image:url(../images/agree.png); background-position:center center; background-repeat:no-repeat}
+.emailForm .message {margin:0 20px 10px;}
 .continueBtn { width:170px; height:50px; line-height:50px; border:none; background:#e3c383;font-family: 'Crete Round', serif; font-size:24px; color:#0f0f0f; font-weight:normal;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; text-decoration:none; display:inline-block; margin:0 auto; cursor:pointer; margin:0 5px;}
 .continueBtn:disabled, .continueBtn.disable {background: #dddddd; opacity:0.5}
 
-.buyNow { width:170px; height:50px; line-height:50px; border:none; background:#24bd53;font-family: 'Crete Round', serif; font-size:24px; color:#0f0f0f; font-weight:normal;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; text-decoration:none; display:inline-block; margin:0 auto; cursor:pointer; margin:0 5px;}
-
+.buyNow { width:170px; height:50px; line-height:50px; border:none; background:#24bd53;font-family: 'Crete Round', serif; font-size:24px; color:#0f0f0f; font-weight:normal;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; text-decoration:none; display:inline-block; margin:0 auto; cursor:pointer; position:absolute; left:100%; top:50%; margin:-37px 0 0 15px;}
+.variableInfo { position:absolute; left:0; top:0; z-index:999; font-size:18px; padding:20px;}
+#intro .variableInfo { color:#fff}
 .progressBar { position:fixed; right:40px; top:40px; width:5px; background-color:#dcdcdc;}
 .progressBar .progressStep {width:100%; position:relative;}
 .progressBar:before, .progressBar .progressStep:before{content:" "; position:absolute; left:50%; z-index:auto; height:15px; width:15px; background:#dcdcdc; overflow:hidden;-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%; margin:0 0 0 -7.5px}
@@ -67,11 +71,11 @@ p,h1,h2,h3,h4,h5,h6, ul,ol,dd,table,fieldset,address {margin: 0 0 20px;}
 .rewardsBStar .active img { background-color:#dbbb7e}
 
 
-.rewardsProducts { float:right; width:48%; margin-bottom:30px;}
+.rewardsProducts { float:right; width:48%; margin-bottom:30px; position:relative;}
 .productBlock { float:left; width:48%; margin:0 1% 25px; border:3px solid #dcdcdc;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px; position:relative; cursor:pointer;}
 .productBlock img { width:100%}
 .prdCenter { float:none; margin:0 auto 25px}
-.checked { background:url(../images/cheched.png) no-repeat; width:30px; height:30px; text-indent:-1000px; overflow:hidden; text-align:left; display:block; position:absolute; right:-13px; top:-13px}
+.checked { background-image:url(../images/cheched.png); background-repeat:no-repeat; width:30px; height:30px; text-indent:-1000px; overflow:hidden; text-align:left; display:block; position:absolute; right:-13px; top:-13px}
 .price { background:#dcdcdc; display:block; position:absolute; left:50%; bottom:0; line-height:32px; width:65px; margin-left:-32px;-moz-border-radius-topleft: 5px;-webkit-border-top-left-radius: 5px; border-top-left-radius: 5px;-moz-border-radius-topright: 5px;-webkit-border-top-right-radius: 5px;border-top-right-radius: 5px; font-size:20px; font-weight:bold; color:#000000; padding-top:3px;}
 
 .prdName {display:block; position:absolute; left:0; bottom:0;  width:100%; font-size:16px; font-weight:normal; color:#000000; }
@@ -80,8 +84,8 @@ p,h1,h2,h3,h4,h5,h6, ul,ol,dd,table,fieldset,address {margin: 0 0 20px;}
 .checkPrd .price { background-color:#24bd53; color:#fff}
 .activeDiv .prdName span{ background-color:#24bd53; color:#fff}
 .totalSpend{clear:both; font-size:24px; color:#000; text-align:center; font-family: 'Crete Round', serif; display:none;}
-#questionDone .rewardsProducts{ float:none; width:auto;}
-#questionDone .productBlock{width:23%; margin:0 1% 25px}
+#questionDone .rewardsProducts, .completedPage{ float:none; width:auto;}
+#questionDone .productBlock, .completedPage .productBlock{width:23%; margin:0 1% 25px}
 /*Reward B*/
 #rewardsB .rewardsAStar li, .rewardBPreferred .rewardsAStar li{ width:4%}
 
@@ -91,7 +95,7 @@ p,h1,h2,h3,h4,h5,h6, ul,ol,dd,table,fieldset,address {margin: 0 0 20px;}
 
 .icheckbox, .iradio {}
 .icheckbox.hover, .iradio.hover {border-color:#dbbb7e;}
-.icheckbox.checked, .iradio.checked {background:#dbbb7e;border-color:#dbbb7e; right:0; top:0}
+.icheckbox.checked, .iradio.checked {background-color:#dbbb7e;border-color:#dbbb7e; right:0; top:0}
 .icheckbox.disabled, .iradio.disabled {cursor: default;}
 .icheckbox.checked.disabled, .iradio.checked.disabled {}
 
@@ -144,9 +148,9 @@ p,h1,h2,h3,h4,h5,h6, ul,ol,dd,table,fieldset,address {margin: 0 0 20px;}
 #thankyou .resultBlock { background-color:#768624; margin:0 50px 25px; padding:15px 15px 1px;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;}
 
 /**/
-#buyNowSection .productBlock .icheckbox { width:30px; height:30px; text-indent:-1000px; overflow:hidden; text-align:left; display:block; position:absolute !important; right:-12px; top:-12px; border:none}
-#buyNowSection .productBlock .layer { position:absolute; left:0; top:0; width:100%; height:100%; cursor:pointer} 
-#buyNowSection .productBlock .icheckbox.checked { background:url(../images/cheched.png) no-repeat;}
-#buyNowSection .productBlock.activeDiv { border-color:#24bd53;}
+#buyNowSection .productBlock .icheckbox, #questionDone .productBlock .icheckbox { width:30px; height:30px; text-indent:-1000px; overflow:hidden; text-align:left; display:block; position:absolute !important; right:-12px; top:-12px; border:none}
+#buyNowSection .productBlock .layer, #questionDone .productBlock .layer { position:absolute; left:0; top:0; width:100%; height:100%; cursor:pointer} 
+#buyNowSection .productBlock .icheckbox.checked, #questionDone .productBlock .icheckbox.checked,{ background:url(../images/cheched.png) no-repeat;}
+#buyNowSection .productBlock.activeDiv, #questionDone .productBlock.activeDiv { border-color:#24bd53;}
 #buyNowSection .totalSpend { display:block}
-#buyNowSection input.icheck{ position:absolute; left:0; top:0; width:1px; height:1px; overflow:hidden; z-index:-11;}
+#buyNowSection input.icheck, #questionDone input.icheck{ position:absolute; left:0; top:0; width:1px; height:1px; overflow:hidden; z-index:-11;}

@@ -53,18 +53,16 @@ $(document).ready( function(){
 	
 	
 	if( $("#buyNowSection .continueBtn").length){
-		$('input.icheck').on('ifClicked', function(event){
-		 $('input.icheck').iCheck('disable');
-	   });
+		$('input.icheck').iCheck('disable');		
 	}
-	if( $("#buyNowSection .continueBtn").length){}else {
+	
 	if( $(".icheck").length){	
 		$('input.icheck').iCheck({
 			checkboxClass: 'icheckbox',
 			radioClass: 'iradio',
 			uncheckedClass: 'unChecked',
 		});
-	}}
+	}
 	if( $("#buyNowSection").length){
 		if( $("#buyNowSection .continueBtn").length){}else {
 		$('input.icheck').on('ifChecked', function(event){
@@ -100,10 +98,9 @@ function intervalTrigger() {
 function winHeight() {
  	winHeight = $(window).outerHeight()
 	prgHeight = winHeight-80;
-	psHeight = prgHeight/5;
 	$('.slideBlock').css({'min-height':winHeight});
 	$('.progressBar').css({'height':prgHeight});
-	$('.progressStep').css({'height':psHeight});
+	$('.progressStep').css({'height':prgHeight});
 };
 function setCookie(cname,cvalue,exdays) {
     var d = new Date();
