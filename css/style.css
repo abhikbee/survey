@@ -31,7 +31,7 @@ p,h1,h2,h3,h4,h5,h6, ul,ol,dd,table,fieldset,address {margin: 0 0 20px;}
 .container { margin:0 auto; width:100%; max-width:1024px;}
 .slideBlock { text-align:center; font-size:18px; font-weight:300; position:relative;padding:30px 0} 
 .glass { position:absolute; left:20px; bottom:20px; z-index:99}
-.slideBlock p { margin-bottom:50px}
+.slideBlock p { margin-bottom:20px}
 #intro { background-color:#595a5c; color:#fff;}
 #intro p { margin-bottom:20px}
 .emailForm { text-align:center;}
@@ -45,6 +45,8 @@ p,h1,h2,h3,h4,h5,h6, ul,ol,dd,table,fieldset,address {margin: 0 0 20px;}
 
 .buyNow { width:170px; height:50px; line-height:50px; border:none; background:#24bd53;font-family: 'Crete Round', serif; font-size:24px; color:#0f0f0f; font-weight:normal;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; text-decoration:none; display:inline-block; margin:0 auto; cursor:pointer; position:absolute; left:100%; top:50%; margin:-37px 0 0 15px;}
 .variableInfo { position:absolute; left:0; top:0; z-index:999; font-size:18px; padding:20px;}
+.variableInfo span { margin:0 5px 0 0; display:inline-block;  background-color:#ccc; height:12px; width:12px;}
+.variableInfo .active { background-color:#24bd53}
 #intro .variableInfo { color:#fff}
 .progressBar { position:fixed; right:40px; top:40px; width:5px; background-color:#dcdcdc;}
 .progressBar .progressStep {width:100%; position:relative;}
@@ -81,7 +83,8 @@ p,h1,h2,h3,h4,h5,h6, ul,ol,dd,table,fieldset,address {margin: 0 0 20px;}
 .prdName {display:block; position:absolute; left:0; bottom:0;  width:100%; font-size:16px; font-weight:normal; color:#000000; }
 .prdName span {display:inline-block; background:#dcdcdc;line-height:normal;padding:5px 10px 2px;-moz-border-radius-topleft: 5px;-webkit-border-top-left-radius: 5px; border-top-left-radius: 5px;-moz-border-radius-topright: 5px;-webkit-border-top-right-radius: 5px;border-top-right-radius: 5px;}
 .checkPrd { border-color:#24bd53;}
-.checkPrd .price { background-color:#24bd53; color:#fff}
+
+.checkPrd .price, .checkPrd .prdName span { background-color:#24bd53; color:#fff}
 .activeDiv .prdName span{ background-color:#24bd53; color:#fff}
 .totalSpend{clear:both; font-size:24px; color:#000; text-align:center; font-family: 'Crete Round', serif; display:none;}
 #questionDone .rewardsProducts, .completedPage{ float:none; width:auto;}
@@ -98,12 +101,13 @@ p,h1,h2,h3,h4,h5,h6, ul,ol,dd,table,fieldset,address {margin: 0 0 20px;}
 .icheckbox.checked, .iradio.checked {background-color:#dbbb7e;border-color:#dbbb7e; right:0; top:0}
 .icheckbox.disabled, .iradio.disabled {cursor: default;}
 .icheckbox.checked.disabled, .iradio.checked.disabled {}
-
+.scaleUL .icheckbox.checked, .scaleUL .iradio.checked { background:#dbbb7e}
 
 #scale {}
 .rewardAForm, .rewardBForm {float:left; width:48%;}
 .scaleForm { -webkit-box-shadow:0 0 3px 0 rgba(0, 0, 0, 0.2);-moz-box-shadow:0 0 3px 0 rgba(0, 0, 0, 0.2);box-shadow:0 0 3px 0 rgba(0, 0, 0, 0.2); background-color:#fff; text-align:left; padding:10px;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px; margin-bottom:30px;}
 .rewardBForm{float:right}
+.rewardBForm .rewardsAStar, .rewardAForm .rewardsBStar { float:none; width:auto; margin:230px 0 0}
 .rewardAForm h2, .rewardBForm h2 { text-align:center; font-size:28px;} 
 .scaleForm h3 { font-size:16px; line-height:normal; color:#3d3935; font-weight:normal;font-family: 'Lato', Arial, Helvetica, sans-serif; background:url(../images/bullet.jpg) no-repeat left 8px; margin:0; padding:0 0 15px 20px}
 .scaleForm .formRow { margin-bottom:20px;}

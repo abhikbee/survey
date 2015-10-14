@@ -1,12 +1,12 @@
 <?php
 include('inc/config.php');
-$email = $_SESSION['login_user'];
+$identifier = $_SESSION['login_user'];
 $opError = $preferred = '';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	if (isset($_POST['preferred'])){$preferred = trim($_POST['preferred']);}else {$hasError = true;}
 	if (!isset($hasError)) {
-		//$sql = "INSERT INTO preferred (`email`, `preferred`) VALUES ('".$email."', '".$preferred."')";
-		$sql = "UPDATE survey SET preferred='".$preferred."' WHERE email='".$email."';";
+		//$sql = "INSERT INTO preferred (`identifier`, `preferred`) VALUES ('".$identifier."', '".$preferred."')";
+		$sql = "UPDATE survey SET preferred='".$preferred."' WHERE identifier='".$identifier."';";
 		//echo $sql;
 			if (mysql_query($sql)) {
 				//echo "New record created successfully";
@@ -23,6 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 <?php include('inc/header.php'); ?>
 <section class="slideBlock" id="rewardPreferred">
+<div class="variableInfo"><span class="active"></span><span></span><span></span>&nbsp;&nbsp;PART 1 of 3</div>
   <div class="container">
     <form name="rewardPreferred" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
       <p class="title">Please select your preferred rewards program</p>
@@ -55,11 +56,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </form>
   </div>
   <div class="progressBar">
-    <div class="progressStep ra1 done"><span class="fillBG"></span></div>
-    <div class="progressStep ra2 done"><span class="fillBG"></span></div>
+
     <div class="progressStep ra3 done"><span class="fillBG"></span></div>
-    <div class="progressStep ra4"><span class="fillBG"></span></div>
-    <div class="progressStep ra5"><span class="fillBG"></span></div>
+
   </div>
 </section>
 <?php include('inc/footer.php'); ?>

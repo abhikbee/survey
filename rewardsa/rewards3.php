@@ -16,7 +16,7 @@ $active = 2;
 			$active = 3;
 			$setSpend = 8.20;
 		} else {
-			$opError = '<div class="message error">Incorrect select</div>';
+			$opError = '<div class="message error">Incorrect selection</div>';
 			$setBuy = $btnBuy;
 		}
 	} else {
@@ -25,9 +25,11 @@ $active = 2;
 ?>
 <?php include('../inc/header.php'); ?>
 <section class="slideBlock" id="buyNowSection">
+<div class="variableInfo"><span class="active"></span><span></span><span></span>&nbsp;&nbsp;PART 1 of 3</div>
   <div class="container">
     <div class="question" id="question1">
-      <p>You visit Starbucks and purchased a Venti Chai Tea Latte, Grande Mocha costing $8.20. As a member of Starbucks Rewards A, you can get any food or drink item free with 12 stars. Please click on the items that you purchased to collect stars under Rewards A.</p>
+      <p>You visit Starbucks and purchased a [Enter Product(s)] costing [Enter amount]. Please click on the items that you purchased and then select ‘Buy Now’ to collect stars under this rewards program.</p>
+      <p>As a member of Rewards Program A, you can get any food or drink item free with 12 stars. </p>
       <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
         <div class="cf">
           <div class="rewardsAStar">

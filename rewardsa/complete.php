@@ -1,6 +1,7 @@
 <?php include('../inc/config.php'); ?>
 <?php include('../inc/header.php'); ?>
 <section class="slideBlock">
+<div class="variableInfo"><span class="active"></span><span></span><span></span>&nbsp;&nbsp;PART 1 of 3</div>
   <div class="container">
     <div class="question" id="questionDone">
       <h1>Congratulations!</h1>
@@ -21,7 +22,7 @@
           <div class="productBlock"><img src="<?php echo $siteurl; ?>images/rp12.jpg"><span class="prdName"><span>Americano</span></span></div>
         </div>
       </div>
-      <a href="<?php echo $siteurl; ?>rewardsb/" class="continueBtn disable">Continue</a> </div>
+      <a href="scale.php" class="continueBtn disable">Continue</a> </div>
   </div>
   <div class="progressBar">
     <div class="progressStep ra1 done"><span class="fillBG"></span></div>

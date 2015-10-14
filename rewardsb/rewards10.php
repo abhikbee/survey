@@ -1,6 +1,6 @@
 <?php 
 include('../inc/config.php');
-$opError = $check1 = $check2 = $check3 = $check4 = $setBuy = $setContinue = $setSpend = $setBtn = '';
+$opError = $check1 = $check2 = $check3 = $check4 = $setBuy = $setContinue = $setSpend = $setContinue = $setBuy = '';
 $btnContinue= '<a href="rewards11.php" class="continueBtn">Continue</a>';
 $btnBuy = '<input type="submit" class="buyNow" name="buynow" value="Buy Now">';
 $active = 95;
@@ -11,22 +11,24 @@ $active = 95;
 		if (isset($_POST['check4'])){$check4 = trim($_POST['check4']);if ($check4 =='wrong') $hasError = true;}
 		if ($check1 =='') {$hasError = true;}
 		if (!isset($hasError)) {
-			$setBtn = $btnContinue;
+			$setContinue = $btnContinue;
 			$active = 100;
 			$setSpend = 50.00;
 		} else {
-			$opError = '<div class="message error">Incorrect select</div>';
-			$setBtn = $btnBuy;
+			$opError = '<div class="message error">Incorrect selection</div>';
+			$setBuy = $btnBuy;
 		}
 	} else {
-		$setBtn = $btnBuy;
+		$setBuy = $btnBuy;
 	}
 ?>
 <?php include('../inc/header.php'); ?>
 <section class="slideBlock" id="buyNowSection">
+<div class="variableInfo"><span class="active"></span><span></span><span></span>&nbsp;&nbsp;PART 1 of 3</div>
   <div class="container">
     <div class="question" id="question1">
-      <p>You visit Starbucks and purchased a Tall Freshly Brewed Coffee costing $2.35. As a member of Starbucks Rewards A, you can get any food or drink item free with 12 stars. Please click on the items that you purchased to collect stars under Rewards A.</p>
+      <p>You visit Starbucks and purchased a [Enter Product(s)] costing [Enter amount]. Please click on the items that you purchased and then select ‘Buy Now’ to collect stars under this rewards program.</p>
+      <p>As a member of Rewards Program B, you can get any food or drink item free with 125 stars. </p>
       <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
         <div class="cf">
           <div class="rewardsBStar">
@@ -57,21 +59,20 @@ $active = 95;
               <input class="icheck" type="checkbox" name="check4" value="wrong" id="check4" <?php if (!empty($check4)) { echo 'checked';}?>>
               <label class="layer" for="check4"></label>
             </div>
+            <?php echo $setBuy; ?>
             <?php if (!empty($setSpend)) { ?>
             <div class="totalSpend">Spend = $<?php echo $setSpend; ?></div>
             <?php } ?>
           </div>
         </div>
-        <?php echo $opError; ?><?php echo $setBtn; ?>
+        <?php echo $opError; ?><?php echo $setContinue; ?>
       </form>
     </div>
   </div>
   <div class="progressBar">
-  	<div class="progressStep ra1 done"><span class="fillBG"></span></div>
+  	
     <div class="progressStep ra2"><span class="fillBG" style="height:74.97%"></span></div>
-    <div class="progressStep ra3"><span class="fillBG"></span></div>
-    <div class="progressStep ra4"><span class="fillBG"></span></div>
-    <div class="progressStep ra5"><span class="fillBG"></span></div>
+    
   </div>
 </section>
 <?php include('../inc/footer.php'); ?>
