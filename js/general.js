@@ -42,6 +42,13 @@ $(document).ready( function(){
 	}
 	
 	if( $("#choicePage").length){
+		
+		$( ".choiceA" ).click(function() {
+			$('#choiceA').iCheck('check');
+		});
+		$( ".choiceB" ).click(function() {
+			$('#choiceB').iCheck('check');
+		});
 	   $('input').on('ifChecked', function(event){
 		  $('.choiceBlock').removeClass('active');
 		  if ($(this).val() == 'Choice A') {$('.choiceA').addClass('active');}

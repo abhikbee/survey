@@ -1,6 +1,9 @@
 <?php 
-	$email = '';
-	if(!empty($_GET["email"])) $email = $_GET["email"];
+if(!isset($_COOKIE['starbucks_user'])) {
+	$identifier = uniqid();
+} else {
+	$identifier = $_COOKIE['starbucks_user'];
+}
 ?>
 <!doctype html>
 <html>
@@ -17,6 +20,7 @@
 <script type="text/javascript">initialize();</script>
 </head>
 <body>
+<div class="variableInfo"><span class="active"></span><span class="active"></span><span class="active"></span>&nbsp;&nbsp;PART 3 of 3</div>
 <div id="instructions"> Javascript must be enabled for the application to run.<br>
   <br>
   Please enable javascript to continue.<br>
@@ -24,13 +28,7 @@
 </div>
 <div class="getEmail">
   <div class="container">
-    <?php  if(!empty($email)) { ?>
-    <input type="hidden" id="subID" name="subID" value="<?php echo $email ?>">
-    <?php } else { ?>
-    <div class="emailForm">
-        <input class="inputBox" type="text" id="subID" name="subID" value="<?php echo $email ?>" placeholder="Enter your email Address">
-    </div>
-    <?php } ?>
+  	<input type="hidden" id="subID" name="subID" value="<?php echo $identifier ?>">
     <input class="button" type="submit" value="I am ready to begin" onclick="loadInstructions('IAT');">
   </div>
 </div>

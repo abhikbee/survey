@@ -3,7 +3,9 @@
 /********* Clear floats *********/
 .cf:before, .cf:after, .container:before, .container:after, .row:before, .row:after, ul:before, ul:after, .boxs:before, .boxs:after {content:" ";display:table}
 .cf:after, .container:after, .row:after, ul:after, .boxs:after{clear:both}
-
+.variableInfo { position:absolute; left:0; top:0; z-index:999; font-size:18px; padding:20px; color:#fff}
+.variableInfo span { margin:0 5px 0 0; display:inline-block;  background-color:#ccc; height:12px; width:12px;}
+.variableInfo .active { background-color:#24bd53}
 body,button,input,select,textarea {color:#3d3935;font-family: 'Lato', Arial, Helvetica, sans-serif;font-size:17px; font-weight:300; line-height:1.5;}
 body {background-color:#f7f7f7; position:relative;} 
 h1,h2,h3,h4,h5,h6 {font-family: 'Crete Round', serif;}

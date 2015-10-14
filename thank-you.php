@@ -1,6 +1,5 @@
 <?php
 include('inc/config.php');
-$identifier = $_SESSION['login_user'];
 $opError = $agree = $fname = $lname = $email = '';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	if(!empty($_POST["fname"])) $fname = $_POST["fname"];
@@ -25,8 +24,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <section class="slideBlock" id="intro">
   <div class="container">
     <h1 class="logo"><img src="<?php echo $siteurl; ?>images/logo.jpg" alt="Starbucks" title="Starbucks"></h1>
-    <p>Thank you! You have successfully completed the Starbucks Rewards Program online research survey.</p>
-	<p>Please fill in the fields below to receive your $5 e-gift card via email.</p>
+    <p><strong>Thank you!</strong> You have successfully completed the Starbucks Rewards Program online research survey. <br>
+Please fill in the fields below to <strong>receive your $5 e-gift card via email</strong>.</p>
     <div class="emailForm">
       <form name="emailverify" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
         <div class="emailForm thanksForm">

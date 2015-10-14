@@ -1,6 +1,5 @@
 <?php
 include('../inc/config.php');
-$identifier = $_SESSION['login_user'];
 $opError = $choice = '';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	if (isset($_POST['choice'])){$choice = trim($_POST['choice']);}else {$hasError = true;}
@@ -20,7 +19,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <section class="slideBlock" id="choicePage">
 <div class="variableInfo"><span class="active"></span><span class="active"></span><span></span>&nbsp;&nbsp;PART 2 of 3</div>
   <div class="container">
-    <p class="desc">As a member of Rewards Program A, you can get any food or drink item free with 12 stars. </p>
     <div class="rewardsAStar choiceStar">
             <ul>
               <?php $active = 12; for ($cnt = 1; $cnt <= 12; $cnt++) { ?>
@@ -28,6 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               <?php } ?>
             </ul>
           </div>
+    <p class="desc">As a member of Rewards Program A, you can get any food or drink item free with 12 stars. </p>
     <form name="rewardPreferred" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
       <div class="cf">
         <div class="choiceBlock choiceA">
@@ -45,11 +44,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           </div>
         </div>
         <div class="choiceBlock choiceB">
-          <div class="starPrice">$10</div>
+          <div class="starPrice">$5</div>
           <div class="rewardsAStar">
             <ul>
              <?php $active = 1; $star = 1; for ($cnt = 1; $cnt <= $star; $cnt++) { ?>
-              <li class="star1 active"><img src="<?php echo $siteurl; ?>images/star.png" alt="star"></li>
+              <li class="star1"><img src="<?php echo $siteurl; ?>images/star.png" alt="star"></li>
               <?php } ?>
             </ul>
           </div>

@@ -1,6 +1,5 @@
 <?php
 include('../inc/config.php');
-$identifier = $_SESSION['login_user'];
 $opError = $bsg1 =  $bsg2 =  $bsg3 =  $bsg4 =  $bsg5= '';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	if (isset($_POST['bsg1'])){$bsg1 = trim($_POST['bsg1']);}else {$hasError = true;}
@@ -48,23 +47,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               <h3>Under Rewards Program B, you feel encouraged to make additional purchases. </h3>
               <ul class="scaleUL">
                 <li>
-                  <input class="icheck" type="radio" name="bsg1" value="Strongly Disagree" id="bsg11" <?php if ($bsg1 == 1) { echo 'checked';} ?>>
+                  <input class="icheck" type="radio" name="bsg1" value="Strongly Disagree" id="bsg11" <?php if ($bsg1 == 'Strongly Disagree') { echo 'checked';} ?>>
                   <label for="bsg11"><span class="value">1</span>Strongly Disagree</label>
                 </li>
                 <li>
-                  <input class="icheck" type="radio" name="bsg1" value="Disagree" id="bsg12" <?php if ($bsg1 == 2) { echo 'checked';} ?>>
+                  <input class="icheck" type="radio" name="bsg1" value="Disagree" id="bsg12" <?php if ($bsg1 == 'Disagree') { echo 'checked';} ?>>
                   <label for="bsg12"><span class="value">2</span>Disagree</label>
                 </li>
                 <li>
-                  <input class="icheck" type="radio" name="bsg1" value="Neutral" id="bsg13" <?php if ($bsg1 == 3) { echo 'checked';} ?>>
+                  <input class="icheck" type="radio" name="bsg1" value="Neutral" id="bsg13" <?php if ($bsg1 == 'Neutral') { echo 'checked';} ?>>
                   <label for="bsg13"><span class="value">3</span>Neutral</label>
                 </li>
                 <li>
-                  <input class="icheck" type="radio" name="bsg1" value="Agree" id="bsg14" <?php if ($bsg1 == 4) { echo 'checked';} ?>>
+                  <input class="icheck" type="radio" name="bsg1" value="Agree" id="bsg14" <?php if ($bsg1 == 'Agree') { echo 'checked';} ?>>
                   <label for="bsg14"><span class="value">4</span>Agree</label>
                 </li>
                 <li>
-                  <input class="icheck" type="radio" name="bsg1" value="Strongly Agree" id="bsg15" <?php if ($bsg1 == 5) { echo 'checked';} ?>>
+                  <input class="icheck" type="radio" name="bsg1" value="Strongly Agree" id="bsg15" <?php if ($bsg1 == 'Strongly Agree') { echo 'checked';} ?>>
                   <label for="bsg15"><span class="value">5</span>Strongly Agree</label>
                 </li>
               </ul>
@@ -73,23 +72,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               <h3>Friends and colleagues are more likely to make for more visits to Starbucks </h3>
               <ul class="scaleUL">
                 <li>
-                  <input class="icheck" type="radio" name="bsg2" value="Strongly Disagree" id="bsg21" <?php if ($bsg2 == 1) { echo 'checked';} ?>>
+                  <input class="icheck" type="radio" name="bsg2" value="Strongly Disagree" id="bsg21" <?php if ($bsg2 == 'Strongly Disagree') { echo 'checked';} ?>>
                   <label for="bsg21"><span class="value">1</span>Strongly Disagree</label>
                 </li>
                 <li>
-                  <input class="icheck" type="radio" name="bsg2" value="Disagree" id="bsg22" <?php if ($bsg2 == 2) { echo 'checked';} ?>>
+                  <input class="icheck" type="radio" name="bsg2" value="Disagree" id="bsg22" <?php if ($bsg2 == 'Disagree') { echo 'checked';} ?>>
                   <label for="bsg22"><span class="value">2</span>Disagree</label>
                 </li>
                 <li>
-                  <input class="icheck" type="radio" name="bsg2" value="Neutral" id="bsg23" <?php if ($bsg2 == 3) { echo 'checked';} ?>>
+                  <input class="icheck" type="radio" name="bsg2" value="Neutral" id="bsg23" <?php if ($bsg2 == 'Neutral') { echo 'checked';} ?>>
                   <label for="bsg23"><span class="value">3</span>Neutral</label>
                 </li>
                 <li>
-                  <input class="icheck" type="radio" name="bsg2" value="Agree" id="bsg24" <?php if ($bsg2 == 4) { echo 'checked';} ?>>
+                  <input class="icheck" type="radio" name="bsg2" value="Agree" id="bsg24" <?php if ($bsg2 == 'Agree') { echo 'checked';} ?>>
                   <label for="bsg24"><span class="value">4</span>Agree</label>
                 </li>
                 <li>
-                  <input class="icheck" type="radio" name="bsg2" value="Strongly Agree" id="bsg25" <?php if ($bsg2 == 5) { echo 'checked';} ?>>
+                  <input class="icheck" type="radio" name="bsg2" value="Strongly Agree" id="bsg25" <?php if ($bsg2 == 'Strongly Agree') { echo 'checked';} ?>>
                   <label for="bsg25"><span class="value">5</span>Strongly Agree</label>
                 </li>
               </ul>
@@ -98,23 +97,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               <h3>Rewards received under this program motivates you to visit Starbucks more frequently</h3>
               <ul class="scaleUL">
                 <li>
-                  <input class="icheck" type="radio" name="bsg3" value="Strongly Disagree" id="bsg31" <?php if ($bsg3 == 1) { echo 'checked';} ?>>
+                  <input class="icheck" type="radio" name="bsg3" value="Strongly Disagree" id="bsg31" <?php if ($bsg3 == 'Strongly Disagree') { echo 'checked';} ?>>
                   <label for="bsg31"><span class="value">1</span>Strongly Disagree</label>
                 </li>
                 <li>
-                  <input class="icheck" type="radio" name="bsg3" value="Disagree" id="bsg32" <?php if ($bsg3 == 2) { echo 'checked';} ?>>
+                  <input class="icheck" type="radio" name="bsg3" value="Disagree" id="bsg32" <?php if ($bsg3 == 'Disagree') { echo 'checked';} ?>>
                   <label for="bsg32"><span class="value">2</span>Disagree</label>
                 </li>
                 <li>
-                  <input class="icheck" type="radio" name="bsg3" value="Neutral" id="bsg33" <?php if ($bsg3 == 3) { echo 'checked';} ?>>
+                  <input class="icheck" type="radio" name="bsg3" value="Neutral" id="bsg33" <?php if ($bsg3 == 'Neutral') { echo 'checked';} ?>>
                   <label for="bsg33"><span class="value">3</span>Neutral</label>
                 </li>
                 <li>
-                  <input class="icheck" type="radio" name="bsg3" value="Agree" id="bsg34" <?php if ($bsg3 == 4) { echo 'checked';} ?>>
+                  <input class="icheck" type="radio" name="bsg3" value="Agree" id="bsg34" <?php if ($bsg3 == 'Agree') { echo 'checked';} ?>>
                   <label for="bsg34"><span class="value">4</span>Agree</label>
                 </li>
                 <li>
-                  <input class="icheck" type="radio" name="bsg3" value="Strongly Agree" id="bsg35" <?php if ($bsg3 == 5) { echo 'checked';} ?>>
+                  <input class="icheck" type="radio" name="bsg3" value="Strongly Agree" id="bsg35" <?php if ($bsg3 == 'Strongly Agree') { echo 'checked';} ?>>
                   <label for="bsg35"><span class="value">5</span>Strongly Agree</label>
                 </li>
               </ul>
@@ -123,23 +122,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               <h3>I feel positive about the reward given under this program</h3>
               <ul class="scaleUL">
                 <li>
-                  <input class="icheck" type="radio" name="bsg4" value="Strongly Disagree" id="bsg41" <?php if ($bsg4 == 1) { echo 'checked';} ?>>
+                  <input class="icheck" type="radio" name="bsg4" value="Strongly Disagree" id="bsg41" <?php if ($bsg4 == 'Strongly Disagree') { echo 'checked';} ?>>
                   <label for="bsg41"><span class="value">1</span>Strongly Disagree</label>
                 </li>
                 <li>
-                  <input class="icheck" type="radio" name="bsg4" value="Disagree" id="bsg42" <?php if ($bsg4 == 2) { echo 'checked';} ?>>
+                  <input class="icheck" type="radio" name="bsg4" value="Disagree" id="bsg42" <?php if ($bsg4 == 'Disagree') { echo 'checked';} ?>>
                   <label for="bsg42"><span class="value">2</span>Disagree</label>
                 </li>
                 <li>
-                  <input class="icheck" type="radio" name="bsg4" value="Neutral" id="bsg43" <?php if ($bsg4 == 3) { echo 'checked';} ?>>
+                  <input class="icheck" type="radio" name="bsg4" value="Neutral" id="bsg43" <?php if ($bsg4 == 'Neutral') { echo 'checked';} ?>>
                   <label for="bsg43"><span class="value">3</span>Neutral</label>
                 </li>
                 <li>
-                  <input class="icheck" type="radio" name="bsg4" value="Agree" id="bsg44" <?php if ($bsg4 == 4) { echo 'checked';} ?>>
+                  <input class="icheck" type="radio" name="bsg4" value="Agree" id="bsg44" <?php if ($bsg4 == 'Agree') { echo 'checked';} ?>>
                   <label for="bsg44"><span class="value">4</span>Agree</label>
                 </li>
                 <li>
-                  <input class="icheck" type="radio" name="bsg4" value="Strongly Agree" id="bsg45" <?php if ($bsg4 == 5) { echo 'checked';} ?>>
+                  <input class="icheck" type="radio" name="bsg4" value="Strongly Agree" id="bsg45" <?php if ($bsg4 == 'Strongly Agree') { echo 'checked';} ?>>
                   <label for="bsg45"><span class="value">5</span>Strongly Agree</label>
                 </li>
               </ul>
@@ -148,23 +147,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               <h3>How happy would you be to pay for someone else’s coffee? </h3>
               <ul class="scaleUL">
                 <li>
-                  <input class="icheck" type="radio" name="bsg5" value="Not at all Happy" id="bsg51" <?php if ($bsg5 == 1) { echo 'checked';} ?>>
+                  <input class="icheck" type="radio" name="bsg5" value="Not at all Happy" id="bsg51" <?php if ($bsg5 == 'Not at all Happy') { echo 'checked';} ?>>
                   <label for="bsg51"><span class="value">1</span>Not at all Happy</label>
                 </li>
                 <li>
-                  <input class="icheck" type="radio" name="bsg5" value="Not Very Happy" id="bsg52" <?php if ($bsg5 == 2) { echo 'checked';} ?>>
+                  <input class="icheck" type="radio" name="bsg5" value="Not Very Happy" id="bsg52" <?php if ($bsg5 == 'Not Very Happy') { echo 'checked';} ?>>
                   <label for="bsg52"><span class="value">2</span>Not Very Happy</label>
                 </li>
                 <li>
-                  <input class="icheck" type="radio" name="bsg5" value="Neutral" id="bsg53" <?php if ($bsg5 == 3) { echo 'checked';} ?>>
+                  <input class="icheck" type="radio" name="bsg5" value="Neutral" id="bsg53" <?php if ($bsg5 == 'Neutral') { echo 'checked';} ?>>
                   <label for="bsg53"><span class="value">3</span>Neutral</label>
                 </li>
                 <li>
-                  <input class="icheck" type="radio" name="bsg5" value="Somewhat Happy" id="bsg54" <?php if ($bsg5 == 4) { echo 'checked';} ?>>
+                  <input class="icheck" type="radio" name="bsg5" value="Somewhat Happy" id="bsg54" <?php if ($bsg5 == 'Somewhat Happy') { echo 'checked';} ?>>
                   <label for="bsg54"><span class="value">4</span>Somewhat Happy</label>
                 </li>
                 <li>
-                  <input class="icheck" type="radio" name="bsg5" value="Very Happy" id="bsg55" <?php if ($bsg5 == 5) { echo 'checked';} ?>>
+                  <input class="icheck" type="radio" name="bsg5" value="Very Happy" id="bsg55" <?php if ($bsg5 == 'Very Happy') { echo 'checked';} ?>>
                   <label for="bsg55"><span class="value">5</span>Very Happy</label>
                 </li>
               </ul>

@@ -16,4 +16,7 @@ if(!mysql_select_db("starbucks"))
 }
 
 $siteurl = "http://localhost/survey/trunk/";
+if(isset($_COOKIE['starbucks_user'])) {
+	$identifier = $_COOKIE['starbucks_user'];
+}
 ?>

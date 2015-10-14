@@ -4,9 +4,9 @@ $opError = $choice = '';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	if (isset($_POST['choice'])){$choice = trim($_POST['choice']);}else {$hasError = true;}
 	if (!isset($hasError)) {
-		$sql = "UPDATE survey SET choicequestion2='".$choice."' WHERE identifier='".$identifier."';";
+		$sql = "UPDATE survey SET choicequestion3='".$choice."' WHERE identifier='".$identifier."';";
 			if (mysql_query($sql)) {	
-				header('Location: question3.php');
+				header('Location: question4.php');
 			} else {
 				echo "Error: " . $sql . "<br>" . $conn->error;
 			}
@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <form name="rewardPreferred" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
       <div class="cf">
         <div class="choiceBlock choiceA">
-          <div class="starPrice">$8.5</div>
+          <div class="starPrice">$8</div>
           <div class="rewardsAStar">
             <ul>
              <?php $active = 1; $star = 1; for ($cnt = 1; $cnt <= $star; $cnt++) { ?>
@@ -44,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           </div>
         </div>
         <div class="choiceBlock choiceB">
-          <div class="starPrice">$8.5</div>
+          <div class="starPrice">$8</div>
           <div class="rewardsAStar">
             <ul>
              <?php $active = 1; $star = 1; for ($cnt = 1; $cnt <= $star; $cnt++) { ?>
@@ -63,7 +63,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </form>
   </div>
   <div class="progressBar">
-    <div class="progressStep ra5"><span class="fillBG" style="height:5%"></span></div>
+    <div class="progressStep ra5"><span class="fillBG" style="height:10%"></span></div>
   </div>
 </section>
 <?php include('../inc/footer.php'); ?>

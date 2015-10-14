@@ -1,17 +1,21 @@
 <?php
 include('inc/config.php');
 $emailErr = $agree = '';
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	if(!empty($_POST["agree"])) $agree = $_POST["agree"];
 	if ($agree != 'Yes') {
 		$emailErr = '<span class="message error">Please agree to our policy!</span>';
 	}else {
 		$uID = uniqid();
+		// Store Session Data
+		if(!isset($_COOKIE['starbucks_user'])) {
+			setcookie("starbucks_user", $uID, time()+3600);  /* expire in 1 hour */
+			$identifier = $_COOKIE['starbucks_user'];
+		} else {
+			$identifier = $_COOKIE['starbucks_user'];
+		}
 		$sql = "insert into survey(identifier,status) values ('$uID',0)";
 		if (mysql_query($sql)) {
-			// Store Session Data
-			$_SESSION['login_user']= $uID; 
 			header('Location: intro.php');
 		} else {
 			echo "Error: " . $sql . "<br>" . $conn->error;
@@ -28,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <form name="emailverify" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
         <?php echo $emailErr; ?>
         <div class="checkBox cf">
-        <input class="icheck" type="checkbox" name="agree" value="Yes" id="agree" checked>
+        <input class="icheck" type="checkbox" name="agree" value="Yes" id="agree">
         <label for="agree">I understand the statements above, and freely consent to participate in the study, rewards subject to the discretion of the researchers. </label>
         </div>
         <input type="submit" value="Continue" name="continue" class="continueBtn introBtn" disabled>

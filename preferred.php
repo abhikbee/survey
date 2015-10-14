@@ -1,6 +1,5 @@
 <?php
 include('inc/config.php');
-$identifier = $_SESSION['login_user'];
 $opError = $preferred = '';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	if (isset($_POST['preferred'])){$preferred = trim($_POST['preferred']);}else {$hasError = true;}

@@ -2,9 +2,10 @@
 <?php include('inc/header.php'); ?>
 <section class="slideBlock" id="intro">
   <div class="container">
-    <h1>Thank You for Completing Our Research!</h1>
-    <p><strong>We will send a $5 e-gift card on the email address that you provided.</strong></p>
-<p>Thank you for taking time out to participate in the web-based Starbucks Rewards Research program. We truly value the information you have provided in this study. Your responses are vital in helping Starbucks understand it’s customers and provide a rewards experience that meets the highest standards of excellence.</p>
+  <h1 class="logo"><img src="<?php echo $siteurl; ?>images/logo.jpg" alt="Starbucks" title="Starbucks"></h1>
+    <h1>Thanks for your time. We really appreciate it!</h1>
+    <p><strong>We will send a $5 e-gift card to your email address within 5 days.</strong></p>
+<p>We truly value your opinions. Your responses are vital in helping Starbucks understand its customers and provide them the best experience possible.</p>
     
   </div>
 </section>
