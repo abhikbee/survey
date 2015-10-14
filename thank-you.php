@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	else if ($lname =='') {$opError = '<div class="message error">Please enter your last name.</div>';}
 	else if ($email =='') {$opError = '<div class="message error">Please enter your email address.</div>';}
 	else {
-		$sql = "UPDATE survey SET firstname='".$fname."', lastname='".$lname."', email='".$email."' WHERE identifier='".$identifier."';";
+		$sql = "UPDATE survey SET firstname='".$fname."', lastname='".$lname."', email='".$email."', status=1 WHERE identifier='".$identifier."';";
 			if (mysql_query($sql)) {	
 				header('Location: thanks.php');
 			} else {
