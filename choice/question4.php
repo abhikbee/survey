@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <form name="rewardPreferred" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
       <div class="cf">
         <div class="choiceBlock choiceA">
-          <div class="starPrice">$9.5</div>
+          <div class="starPrice">$9.50</div>
           <div class="rewardsAStar">
             <ul>
              <?php $active = 1; $star = 1; for ($cnt = 1; $cnt <= $star; $cnt++) { ?>
@@ -38,13 +38,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               <?php } ?>
             </ul>
           </div>
+          <p>Choice 1 to avail $9.50 and one star under Rewards Program A</p>
           <div class="choiceRadio">
             <input class="icheck" type="radio" name="choice" value="Choice A" id="choiceA">
             <label for="choiceA">Choice A</label>
           </div>
         </div>
         <div class="choiceBlock choiceB">
-          <div class="starPrice">$9.5</div>
+          <div class="starPrice">$9.50</div>
           <div class="rewardsAStar">
             <ul>
              <?php $active = 1; $star = 1; for ($cnt = 1; $cnt <= $star; $cnt++) { ?>
@@ -52,6 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               <?php } ?>
             </ul>
           </div>
+          <p>Choice 2 to avail $9.50 and no stars under Rewards Program A</p>
           <div class="choiceRadio">
             <input class="icheck" type="radio" name="choice" value="Choice B" id="choiceB">
             <label for="choiceB">Choice B</label>

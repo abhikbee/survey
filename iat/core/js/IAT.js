@@ -333,7 +333,6 @@ function instructionPage()
 		    resulttext = "<div class='thanksPart'>Thanks for participating!</div>";
 		    $("#picture_frame").html(resulttext);
 		}
-		window.location.href = "http://localhost/survey/trunk/thank-you.php";
 	}
 	else
 	{
@@ -585,6 +584,7 @@ function WriteFile()
  			'subject': subject, 'data': str });	
  	
 	// notify user of success?
+	setTimeout(redirect,2000)
 }
 function WriteDatabase()
 {
@@ -613,8 +613,6 @@ function WriteDatabase()
  			'errors':roundArray[i][j].errors, 'mseconds':(roundArray[i][j].endtime - roundArray[i][j].starttime) });
 		}
 	}
-	
- 	
 	// notify user of success?
 }
 
@@ -717,3 +715,4 @@ function runSession(kEvent)
 		roundArray[session][roundnum].errors++; // note error
 	}
 }
+function redirect(){window.location.href = "http://www.changetestbed.com/demo/thank-you.php";}

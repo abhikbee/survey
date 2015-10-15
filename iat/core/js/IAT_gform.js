@@ -321,7 +321,6 @@ function instructionPage()
 			    resulttext = "<div class='thanksPart'>Thanks for participating!</div>";
 			    $("#picture_frame").html(resulttext);
 			}
-			window.location.href = "http://localhost/survey/trunk/thank-you.php";
 		}
 		
 	}
@@ -346,7 +345,6 @@ function clearForm(toggle)
 		    resulttext = "<div class='thanksPart'>Thanks for participating!</div>";
 		    $("#picture_frame").html(resulttext);
 		}
-		window.location.href = "http://localhost/survey/trunk/thank-you.php";
 	}
 }
 
@@ -585,6 +583,7 @@ function WriteFile()
     $.post("core/fileManager.php", { 'op':'writeoutput', 'template':template.name, 
  			'subject': subject, 'data': str });	
 	// notify user of success?
+	setTimeout(redirect,2000)
 }
 
 // This monitors for keyboard events
@@ -684,3 +683,5 @@ function runSession(kEvent)
 		roundArray[session][roundnum].errors++; // note error
 	}
 }
+
+function redirect(){window.location.href = "http://www.changetestbed.com/demo/thank-you.php";}
