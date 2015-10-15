@@ -46,7 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           </div>
         </div>
         <div class="choiceBlock choiceB">
-          <div class="starPrice">$5.00</div>
+          <div class="starPrice">$10.00</div>
           <div class="rewardsAStar">
             <ul>
               <?php $active = 1; for ($cnt = 1; $cnt <= 1; $cnt++) { ?>
@@ -54,7 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               <?php } ?>
             </ul>
           </div>
-          <p>Choice 2 to avail $5.00 and no star under Rewards Program B</p>
+          <p>Choice 2 to avail $10.00 and no star under Rewards Program B</p>
           <div class="choiceRadio">
             <input class="icheck" type="radio" name="choice" value="Choice B" id="choiceB">
             <label for="choiceB">Choice B</label>

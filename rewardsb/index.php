@@ -27,8 +27,7 @@ $active = 0;
 <div class="variableInfo"><span class="active"></span><span></span><span></span>&nbsp;&nbsp;PART 1 of 3</div>
   <div class="container">
     <div class="question" id="question1">
-      <p>You visit Starbucks and purchased a [Enter Product(s)] costing [Enter amount]. Please click on the items that you purchased and then select ‘Buy Now’ to collect stars under this rewards program.</p>
-      <p>As a member of Rewards Program B, you can get any food or drink item free with 125 stars. </p>
+      <p>You visit Starbucks and purchased a <strong>Tall Latte</strong> costing <strong>$2.85</strong>. Please click on the items that you purchased and then select ‘Buy Now’ to collect stars under this rewards program.</p>
       <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
         <div class="cf">
           <div class="rewardsBStar">
