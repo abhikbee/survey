@@ -1,5 +1,5 @@
 template = {};
-sub = '';
+sub = ''; 
 
 function randomString(length) {
 	var chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
