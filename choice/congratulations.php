@@ -4,9 +4,11 @@
 <div class="variableInfo"><span class="active"></span><span class="active"></span><span class="active"></span>&nbsp;&nbsp;PART 3 of 3</div>
   <div class="container">
     <h1>Congratulations!</h1>
-<p>You have successfully completed Part 2 of the online research and can now proceed to Part 3.</p>
-<p>Imagine that you are walk into a Starbucks store and you’re offered two types of rewards for completing a specific action. In the example below from Part 3, you are given an option between ‘5 bonus stars’ and ‘$2 off purchase’ for purchasing an item that you haven’t tried. You can select ‘5 bonus stars’ by entering E on the keyboard and ‘$2 off purchases’ by entering ‘U’ on the keyboard for completing this action. Please make your selections as quick as you can. </p>
-<p>Part 3 takes about 6 minutes to complete.</p>
+<p>You have successfully completed Part 2 and can now proceed to Part 3.</p>
+<p>In this part, you will be asked to select a preferred reward for completing different actions. The option on the left can be selected by pressing the 'E' key, while the option on the right can be selected by pressing the 'U' key.</p>
+<p>In the example below from Part 3, imagine that you have purchased an item that you haven't tried and are given the choice to receive ‘5 bonus stars’ or ‘$2 off your purchase’ for doing so. If you prefer '5 bonus stars', you can select this choice by entering 'E' on the keyboard. If you prefer '$2 off purchases', you can select this choice by entering 'U' on the keyboard. </p>
+<p>Please try to make your selections as quick as you can.</p>
+<p>Ready? Part 3 takes about 6 minutes to complete.</p>
 <div class="screenshot"><img src="../images/screenshot.jpg" alt="#"></div>
     <a href="<?php echo $siteurl; ?>var3" class="continueBtn">Continue</a> </div>
 </section>
