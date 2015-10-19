@@ -5,7 +5,7 @@
 .cf:after, .container:after, .row:after, ul:after, .boxs:after{clear:both}
 /********* Common Classes *********/
 hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:20px 0;padding:0}
-body,button,input,select,textarea {color:#3d3935;font-family: 'Lato', Arial, Helvetica, sans-serif;font-size:18px; font-weight:300; line-height:1.5;}
+body,button,input,select,textarea {color:#3d3935;font-family: 'Lato', Arial, Helvetica, sans-serif;font-size:18px; font-weight:300; line-height:1.4;}
 body {background-color:#f7f7f7; position:relative;} 
 h1,h2,h3,h4,h5,h6 {font-family: 'Crete Round', serif;}
 h1 {font-size: 2.308em;}
@@ -20,7 +20,7 @@ ul ul,ol ol { margin:10px 0}
 ul.bulletText { list-style:none; padding:0;}
 ul.bulletText li {padding:2px 0 2px 15px;}
 p,h1,h2,h3,h4,h5,h6, ul,ol,dd,table,fieldset,address {margin: 0 0 20px;}
-.inputBox {-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; border:none; border-bottom:3px solid #fff; max-width:450px; width:100%; padding:10px 20px; line-height:30px;background:rgba(255,255,255,0.4); display:block; font-size:18px; font-weight:normal; color:#fff}
+.inputBox {-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; border:none; border-bottom:2px solid #fff; max-width:100%; width:100%; padding:5px 20px; line-height:30px;background:rgba(255,255,255,0.4); display:block; font-size:18px; font-weight:normal; color:#fff}
 /********** Image Formating & Alignment **********/
 .message{padding:5px 10px;margin-bottom:20px;border:1px solid transparent; display:block;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;}
 .message.success {color: #3c763d;background-color: #dff0d8;border-color: #d6e9c6;}
@@ -32,17 +32,19 @@ p,h1,h2,h3,h4,h5,h6, ul,ol,dd,table,fieldset,address {margin: 0 0 20px;}
 .slideBlock { text-align:center; font-size:18px; font-weight:300; position:relative;padding:30px 0} 
 .glass { position:absolute; left:20px; bottom:20px; z-index:99}
 .slideBlock p { margin-bottom:20px}
-#intro { background-color:#595a5c; color:#fff; padding-top:60px}
-#intro p { margin-bottom:30px}
+#intro { background-color:#595a5c; color:#fff; padding-top:40px}
+.logo { margin:0}
 .emailForm { text-align:center; }
-.thanksForm {width:450px; margin:50px auto}
+.thanksForm {width:400px; margin:20px auto}
 .emailForm .checkBox {margin-bottom:20px;}
-#intro .emailForm .checkBox {margin-bottom:40px;}
+
+#intro .emailForm .checkBox {margin-bottom:30px;}
 .emailForm .checkBox label { font-size:16px}
 .emailForm .checkBox .icheckbox { display:inline-block; margin:0;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;}
 .emailForm .checkBox .icheckbox.checked { background-image:url(../images/agree.png); background-position:center center; background-repeat:no-repeat}
-.emailForm .message { margin-bottom:0 0 20px}
-.emailForm .inputBox { display:inline-block; max-width:100%; margin-bottom:20px;}
+.emailForm .message { margin:20px 0 0}
+.emailForm .inputBox { display:inline-block;margin-bottom:10px;}
+.emailForm select.inputBox { height:40px;}
 .continueBtn { width:170px; height:50px; line-height:50px; border:none; background:#e3c383;font-family: 'Crete Round', serif; font-size:24px; color:#0f0f0f; font-weight:normal;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; text-decoration:none; display:inline-block; margin:0 auto; cursor:pointer; margin:0 5px;}
 .continueBtn:disabled, .continueBtn.disable {background: #dddddd; opacity:0.5}
 
@@ -81,6 +83,7 @@ p,h1,h2,h3,h4,h5,h6, ul,ol,dd,table,fieldset,address {margin: 0 0 20px;}
 .productBlock img { width:100%}
 .prdCenter { float:none; margin:0 auto 25px}
 .checked { background-image:url(../images/cheched.png); background-repeat:no-repeat; width:30px; height:30px; text-indent:-1000px; overflow:hidden; text-align:left; display:block; position:absolute; right:-13px; top:-13px}
+.error .checked { background-image:url(../images/wrong.png);}
 .price { background:#dcdcdc; display:block; position:absolute; left:50%; bottom:0; line-height:32px; width:65px; margin-left:-32px;-moz-border-radius-topleft: 5px;-webkit-border-top-left-radius: 5px; border-top-left-radius: 5px;-moz-border-radius-topright: 5px;-webkit-border-top-right-radius: 5px;border-top-right-radius: 5px; font-size:20px; font-weight:bold; color:#000000; padding-top:3px;}
 
 .prdName {display:block; position:absolute; left:0; bottom:0;  width:100%; font-size:16px; font-weight:normal; color:#000000; }
@@ -89,6 +92,7 @@ p,h1,h2,h3,h4,h5,h6, ul,ol,dd,table,fieldset,address {margin: 0 0 20px;}
 
 .checkPrd .price, .checkPrd .prdName span { background-color:#24bd53; color:#fff}
 .activeDiv .prdName span{ background-color:#24bd53; color:#fff}
+.activeDiv.error .prdName span { background-color:#ff0000}
 .totalSpend{clear:both; font-size:24px; color:#000; text-align:center; font-family: 'Crete Round', serif; display:none;}
 #questionDone .rewardsProducts, .completedPage{ float:none; width:auto;}
 #questionDone .productBlock, .completedPage .productBlock{width:23%; margin:0 1% 25px}
@@ -122,23 +126,22 @@ p,h1,h2,h3,h4,h5,h6, ul,ol,dd,table,fieldset,address {margin: 0 0 20px;}
 /**/
 .rewardPreferred { margin:0 -20px 30px}
 #rewardPreferred .title { font-size:22px; font-weight:normal;}
-.rewardAPreferred, .rewardBPreferred { float:left; padding:0 20px;}
-.rewardAPreferred .rewardsAStar, .rewardBPreferred .rewardsAStar { float:none; width:auto;}
-.rewardAPreferred {width:40%}
-.rewardBPreferred {width:60%}
-.rewardBPreferred .rewardsAStar ul { padding:48px 15px;}
+.rewardAPreferred, .rewardBPreferred, .rewardCPreferred { float:left; width:33.33%; padding:0 20px;}
+.rewardAPreferred .rewardsAStar, .rewardBPreferred .rewardsAStar, .rewardCPreferred .rewardsAStar{ float:none; width:auto;height:270px; padding-bottom:0; margin-bottom:10px;}
+.rewardBPreferred .rewardsAStar ul { padding:35px 15px 0;}
 .rewardPreferred .rewardsAStar { position:relative;border:3px solid #fff; cursor:pointer}
-.rewardPreferred #rewardsa, .rewardPreferred #rewardsb { visibility:hidden}
-.rewardPreferred label {font-family: 'Crete Round', serif; font-size:28px}
+.rewardPreferred #rewardsa, .rewardPreferred #rewardsb, .rewardPreferred #rewardsc { visibility:hidden}
+.rewardPreferred label {font-family: 'Crete Round', serif; font-size:24px; display:block;}
 .rewardPreferred .rewardsAStar.checkPrd { border-color:#24bd53;}
-
+.rewardCPreferred .rewardsAStar { font-size:28px; font-weight:bold; line-height:normal; padding-top:95px}
 /*Choice Page*/
-#choicePage .desc { margin-bottom:40px;}
-#choicePage .rewardsAStar {float:none; width:auto; margin:0 0 30px; border:3px solid #fff;}
-.choiceBlock { float:left; width:46%; margin:0 2% 20px}
+#choicePage form {background:url("../images/or.png") no-repeat center 16%;margin: 0 -7%;}
+#choicePage .desc { margin-bottom:20px;}
+#choicePage .rewardsAStar {float:none; width:auto; margin:0 0 30px; border:3px solid #fff;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;}
+.choiceBlock { float:left; width:36%; margin:0 7% 20px; padding:15px; background-color:#fff;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px; border:2px solid #eee;}
 .choiceBlock .starPrice, .choiceBlock .choicePrice {-webkit-box-shadow:0 0 3px 0 rgba(0, 0, 0, 0.2);-moz-box-shadow:0 0 3px 0 rgba(0, 0, 0, 0.2);box-shadow:0 0 3px 0 rgba(0, 0, 0, 0.2); background-color:#fff; text-align:left; padding:10px;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px; text-align:center; margin-bottom:30px; font-size:24px; color:#3d3935; font-weight:bold; line-height:30px; border:3px solid #fff;}
-.choiceBlock .starPrice { position:relative; margin-bottom:50px;}
-.choiceBlock .starPrice:after{content:"+"; position:absolute; left:50%; z-index:auto; font-size:36px; width:22px; text-align:center; font-weight:normal; overflow:hidden;-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%; margin:0 0 0 -11px; bottom:-38px;}
+.choiceBlock .starPrice { position:relative; margin-bottom:30px;}
+.choiceBlock .starPrice:after{content:"+"; position:absolute; left:50%; z-index:auto; font-size:25px; width:22px; text-align:center; font-weight:normal; overflow:hidden;-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%; margin:0 0 0 -11px; bottom:-32px;}
 .choiceBlock .choicePrice {border:3px solid #fff; padding:15px; height:113px; line-height:113px; font-size:48px;}
 .choiceBlock .choiceRadio {position:relative}
 .choiceBlock .choiceRadio label { position:absolute; left:0; top:0; width:100%; height:45px; line-height:45px; cursor:pointer; font-size:20px; font-weight:normal; color:#fff}
@@ -148,7 +151,12 @@ p,h1,h2,h3,h4,h5,h6, ul,ol,dd,table,fieldset,address {margin: 0 0 20px;}
 .active .choicePrice, #choicePage .active .rewardsAStar, .choiceBlock.active .starPrice { border-color:#24bd53}
 .choiceB .rewardsAStar ul {}
 .choiceB .rewardsAStar li { width:4%}
-#choicePage .choiceStar, #choicePage .choiceStar125 { float:none; width:50%; margin:0 auto 40px}
+#choicePage .choiceStar, #choicePage .choiceStar125 { float:none; margin:0 auto 20px}
+#choicePage .rewardsAStar ul { padding:0}
+#choicePage .choiceStar { width:25%}
+#choicePage .choiceStar li { padding:5px 15px;}
+#choicePage .choiceStar125 { width:65%}
+#choicePage .choiceStar125 li { padding:3px 5px}
 #choicePage .choiceBlock .rewardsAStar li { float:none; width:auto;}
 #choicePage .choiceStar125 li { width:4%}
 /*Thank you*/
@@ -156,12 +164,18 @@ p,h1,h2,h3,h4,h5,h6, ul,ol,dd,table,fieldset,address {margin: 0 0 20px;}
 #thankyou h1 { margin-bottom:50px;}
 #thankyou p { margin-bottom:20px;}
 #thankyou .resultBlock { background-color:#768624; margin:0 50px 25px; padding:15px 15px 1px;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;}
-
+.choiceStarFull .rewardsAStar{ float:none; width:auto; margin-top:20px;}
+.choiceStarFull .rewardsAStar li { padding:15px 0}
+.choiceStarFull2 .rewardsAStar li { width:4%}
+.choiceStarFull p { font-weight:normal; font-size:24px; margin-bottom:40px;}
 /**/
 #buyNowSection form { padding-top:20px;}
+#buyNowSection p { font-size:20px;}
+#buyNowSection .productBlock.gray{ opacity:0.3;}
 #buyNowSection .productBlock .icheckbox, #questionDone .productBlock .iradio { width:30px; height:30px; text-indent:-1000px; overflow:hidden; text-align:left; display:block; position:absolute !important; right:-12px; top:-12px; border:none}
 #buyNowSection .productBlock .layer, #questionDone .productBlock .layer { position:absolute; left:0; top:0; width:100%; height:100%; cursor:pointer} 
 #buyNowSection .productBlock .icheckbox.checked, #questionDone .productBlock .iradio.checked,{ background:url(../images/cheched.png) no-repeat;}
 #buyNowSection .productBlock.activeDiv, #questionDone .productBlock.activeDiv { border-color:#24bd53;}
+#buyNowSection .productBlock.activeDiv.error, #questionDone .productBlock.activeDiv.error { border-color:#ff0000;}
 #buyNowSection .totalSpend { display:block}
 #buyNowSection input.icheck, #questionDone input.icheck{ position:absolute; left:0; top:0; width:1px; height:1px; overflow:hidden; z-index:-11;}

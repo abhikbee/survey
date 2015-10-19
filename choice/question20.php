@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	if (!isset($hasError)) {
 		$sql = "UPDATE survey SET choicequestion20='".$choice."' WHERE identifier='".$identifier."';";
 			if (mysql_query($sql)) {
-				header("Location: ../iat/");
+				header("Location: congratulations.php");
 				
 			} else {
 				echo "Error: " . $sql . "<br>" . $conn->error;

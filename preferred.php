@@ -39,6 +39,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           <input type="radio" name="preferred" value="Rewards A" id="rewardsa">
           <label for="rewardsa">Rewards A</label>
         </div>
+        <div class="rewardCPreferred">
+          <div class="rewardsAStar">
+            I don't have a preference.
+          </div>
+          <input type="radio" name="preferred" value="I dont have a preference" id="rewardsc">
+          <label for="rewardsc">I don't have a preference</label>
+        </div>
         <div class="rewardBPreferred">
           <div class="rewardsAStar">
             <ul>
